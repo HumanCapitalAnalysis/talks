@@ -6,7 +6,7 @@ This repository contains all material for the talks.
 
 I provide a brief overview on the conceptual framework provided by the generalized Roy model.
 
-### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_github_authorea/lecture.ipynb#/) by [sebecker](https://github.com/github/sebecker)
+### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_github_authorea/lecture.ipynb#/) by [sebecker](https://github.com/sebecker)
 
 I provide a brief overview on GitHub and Authorea.
 
