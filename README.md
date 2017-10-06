@@ -2,7 +2,7 @@
 
 This repository contains all material for the talks.
 
-### [Overview on the Generalized Roy Model](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/overview_generalized_roy/lecture.ipynb#/) by [peisenha](https://github.com/github/peisenha)
+### [Overview on the Generalized Roy Model](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/overview_generalized_roy/lecture.ipynb#/) by [peisenha](https://github.com/peisenha)
 
 I provide a brief overview on the conceptual framework provided by the generalized Roy model.
 
