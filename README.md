@@ -10,10 +10,10 @@ I provide a brief overview on the conceptual framework provided by the generaliz
 
 I provide a brief overview on GitHub and Authorea.
 
-### [Introduction to Data Analytics using Python](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/lecture.ipynb#/) by [tobiasraabe](https://github.com/github/tobiasraabe)
+### [Introduction to Data Analytics using Python](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/lecture.ipynb#/) by [tobiasraabe](https://github.com/tobiasraabe)
 
 I provide a brief overview on data analytics using Python.
 
-### [Introduction to the NLSY Dataset](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_nlsy_dataset/lecture.ipynb#/) by [benediktkauf](https://github.com/github/benediktkauf)
+### [Introduction to the NLSY Dataset](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_nlsy_dataset/lecture.ipynb#/) by [benediktkauf](https://github.com/benediktkauf)
 
 I provide a brief overview on the NLSY dataset.
