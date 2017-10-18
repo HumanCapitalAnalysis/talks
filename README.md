@@ -6,6 +6,11 @@ This repository contains all material for the talks.
 
 I provide a brief overview on the conceptual framework provided by the generalized Roy model. We discuss alternative sources of heterogeneity, numerous parameters of interest, and explore the marginal treatment effect in detail.
 
+
+### [Returns to Education](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/overview_generalized_roy/lecture.ipynb#/) by [peisenha](https://github.com/peisenha)
+
+I discuss the current literature attempting to estimate returns to education.
+
 ### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_github_authorea/lecture.ipynb#/) by [sebecker](https://github.com/sebecker)
 
 I provide a brief overview on GitHub and Authorea.
