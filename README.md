@@ -6,8 +6,7 @@ This repository contains all material for the talks.
 
 I provide a brief overview on the conceptual framework provided by the generalized Roy model. We discuss alternative sources of heterogeneity, numerous parameters of interest, and explore the marginal treatment effect in detail.
 
-
-### [Returns to Education](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/overview_generalized_roy/lecture.ipynb#/) by [peisenha](https://github.com/peisenha)
+### [Returns to Education](https://github.com/policyMetrics/talks/blob/master/returns_to_education/slides.pdf) by [peisenha](https://github.com/peisenha)
 
 I discuss the current literature attempting to estimate returns to education.
 

@@ -1,8 +1,8 @@
 \input{header}
 
 %!TEX root = ../main.tex
-\title{Estimating Marginal Returns to Education}
-\author{Pedro Carneiro, James J. Heckman, and Edward J. Vytlacil}
+\title{Returns to Education}
+\author{Philipp Eisenhauer}
 
 \date{}
 
@@ -13,10 +13,274 @@
 \maketitle
 
  \begin{frame}
-\begin{quote} This paper estimates marginal returns to college for individuals induced to enroll in college by different marginal policy changes. The recent instrumental variables literature seeks to estimate this parameter, but in general it does so only under strong assumptions that are tested and found wanting. We show how to utilize economic theory and local instrumental variables estimators to estimate the effect of marginal policy changes. Our empirical analysis shows that returns are higher for individuals with values of unobservables that make them more likely to attend college. We contrast our estimates with IV estimates of the return to schooling.
-\end{quote}
+
+ I heavily draw on the material presented in:
+
+\begin{itemize}
+\item \bibentry{Heckman.2006a}
+\end{itemize}
+
+\end{frame}
+
+
+ \begin{frame}
+We will look at two papers that explore reduced-form estimations of the returns to education
+.
+\begin{itemize}
+\item \bibentry{Carneiro.2002}
+\item \bibentry{Mogstad.2017}
+\end{itemize}
  \end{frame}
 
+ \begin{frame}
+We will look at two papers that explore structural estimations of the returns to education
+.
+\begin{itemize}
+\item \bibentry{Cunha.2005b}
+\item \bibentry{Eisenhauer.2015b}
+\end{itemize}
+ \end{frame}
+
+
+\begin{frame}
+Why are returns to education important?
+\begin{itemize}
+\item help explain wage inequality
+\item judge relative profitability of investment in education?
+\item ...
+\end{itemize}
+\end{frame}
+
+\begin{frame}\nocite{Mincer.1958,Mincer.1974}
+\textbf{Mincer Equation}
+\begin{align*}
+Y(s, x) = \alpha + \rho_s s + \beta_0 x + \beta_1 x^2 + \epsilon
+\end{align*}
+
+Conceptual Frameworks
+\begin{itemize}
+\item compensating differences model
+\item accounting-identity model
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+\LARGE\textit{Compensating Differences Model}
+\end{center}\end{frame}
+
+\begin{frame}
+\begin{align*}
+V(s) = Y(s)\int_s^T e^{-rt} dt = \frac{Y(s)}{r}(e^{-rs} - e^{-rT})
+\end{align*}
+
+\end{frame}
+
+\begin{frame}
+
+Equalizing present value of earnings across schooling levels:
+\begin{align*}
+\ln Y(s) = \ln Y(0) + r s + \ln\left(\frac{1 -e^{-rs}}{1 - e^{-r(T - s)}}\right) \\
+\end{align*}
+
+$\Rightarrow$ $\rho_s$ equals the market interest rate
+
+\end{frame}
+
+\begin{frame}
+Model Features:
+\begin{itemize}
+\item identical abilities and opportunities
+\item no credit constraints
+\item perfect certainty
+\item no direct cost of schooling
+\item no nonpecuniary benefits of school and work
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+Model Features:
+\begin{itemize}
+\item identical abilities and opportunities
+\item no credit constraints
+\item perfect certainty
+\item no direct cost of schooling
+\item no nonpecuniary benefits of school and work
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+\LARGE\textit{Accounting-Identity Model}
+\end{center}\end{frame}
+
+\begin{frame}
+\begin{align*}
+P_t & \equiv P_{t - 1} (1 + k_{t - 1} \rho_{t - 1}) \equiv \prod^{t - 1}_{j= 0} (1 + \rho_jk_j)P_0 \\
+& \\
+\ln P_t & \equiv \ln P_0  + s \ln(1 + \rho_s) + \sum^{t -1}_{j=2} \ln(1 + \rho_0 k_j) \\
+& \approx  \ln P_0 + s \rho_s + \rho_0 \sum^{t - 1}_{j=s} k_j
+\end{align*}
+\end{frame}
+
+
+
+\begin{frame}
+Assuming linearly declining rate of post-school investment:
+\begin{align*}
+k_{s + x} = \kappa\left( 1 - \frac{x}{T}\right),\text{where} \quad x = t - s
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[htp]\centering
+\caption{Post-School Investment}\label{Post-School Investment}\scalebox{0.50}{\includegraphics{fig-mincer-post-school}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{align*}
+\ln P_{x + s} \approx \ln P_0 + s\rho_s + \left(\rho_0 \kappa + \frac{\rho_0\kappa}{2T}\right)x - \frac{\rho_0\kappa}{2T} x^2 \\
+\end{align*}
+Accounting for the difference in potential and observed earnings:
+\begin{align*}
+\ln Y(s, x) & = \ln P_{x + s} - \kappa\left(1 - \frac{x}{T}\right) \\
+            & = [\ln P_0 - \kappa] + \rho_s s + \left(\rho_0\kappa + \frac{\rho_0\kappa}{2T} + \frac{\kappa}{T}\right) x - \frac{\rho_0\kappa}{2T}x^2
+\end{align*}
+$\Rightarrow$ $\rho_s$ is the average earnings increase with schooling
+\end{frame}
+
+\begin{frame}
+\textbf{Standard Mincer Equation}
+\begin{align*}
+\ln Y(s, x) = \alpha + \rho_s s + \beta_0 x + \beta_1 x^2,
+\end{align*}
+where
+\begin{align*}
+\alpha & =\ln P_0 - \kappa \\
+\beta_0 & = \left(\rho_0\kappa + \frac{\rho_0\kappa}{2T} + \frac{\kappa}{T}\right) \\
+\beta_1 & = \frac{\rho_0\kappa}{2T}
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\textbf{Random Coefficient Version}
+\begin{align*}
+\ln Y(s_i, x_i) = \alpha_{i} + \rho_{si} s_i + \beta_{0i} x_i + \beta_{1i} x_i^2
+\end{align*}
+and let
+\begin{align*}
+\bar{\alpha} = \E[\alpha_i] &\qquad \bar{\rho}_s = \E[\rho_{si}]\\
+\bar{\beta}_0 = \E[\beta_{0i}]&\qquad \bar{\beta}_1 = \E[\beta_{1i}]
+\end{align*}
+\end{frame}
+
+
+\begin{frame}
+Dropping individual subscripts ...
+\begin{align*}
+\ln Y(s, x) & = \bar{\alpha} + \bar{\rho}_s s + \bar{\beta}_{0} x + \bar{\beta}_{1} x^2 \\
+                & + \underbrace{[(\alpha - \bar{\alpha}) + (\rho_s - \bar{\rho}_s) s + (\beta_0 - \bar{\beta}_0)x + (\beta_1 - \bar{\beta}_1)x^2 ]}_{\epsilon}\\
+\end{align*}
+$\Rightarrow$ If the schooling decision is determined by individual returns, then we are back in the case of a correlated random coefficient model \citep{Heckman.2006d}.
+\end{frame}
+
+
+
+\begin{frame}[plain]
+
+\begin{center}
+\includegraphics[width=.65\columnwidth]{fig-mincer-regressions}
+\end{center}
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+\LARGE\textit{Implications}
+\end{center}\end{frame}
+
+
+
+\begin{frame}
+\begin{itemize}
+\item Log-earnings profiles are parallel across schooling levels.
+\begin{align*}
+\frac{\partial \ln Y(s, x)}{\partial s \partial x} = 0
+\end{align*}
+\item Log-earnings age profiles diverge with age across schooling levels.
+\begin{align*}
+\frac{\partial \ln Y(s, x)}{\partial s \partial t} = \frac{\rho_0\kappa}{T} > 0
+\end{align*}
+\item The variance of earnings over the life cycle has a U-shaped pattern.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}[htp]\centering
+\caption{Mincerian Experience Profiles}\label{Mincerian Experience Profiles}\scalebox{0.3}{\includegraphics{fig-mincer-equation-experience}}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\begin{figure}[htp]\centering
+\caption{Mincerian Age Profiles}\label{Mincerian Age Profiles}\scalebox{0.3}{\includegraphics{fig-mincer-equation-age}}
+\end{figure}
+\end{frame}
+
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+\LARGE\textit{Empirical Evidence}
+\end{center}\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=.90\columnwidth]{fig-mincer-experience-1940}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=.90\columnwidth]{fig-mincer-experience-1990}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=.90\columnwidth]{fig-mincer-parallelism}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=.90\columnwidth]{fig-mincer-age-1940}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=.90\columnwidth]{fig-mincer-age-1980}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=.90\columnwidth]{fig-mincer-variance-1940}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\includegraphics[width=.90\columnwidth]{fig-mincer-variance-1980}
+\end{center}
+\end{frame}
 
 %!TEX root = ../main.tex
 \beginbackup\appendix
