@@ -12,7 +12,7 @@ I discuss the current literature attempting to estimate returns to education.
 
 ### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_github_authorea/lecture.ipynb#/) by [sebecker](https://github.com/sebecker)
 
-I provide a brief overview of Authorea , the tool we plan to use for the collaborative writing projects. The slides also include a small introduction to Git/GitHub. For more information about the features and applications of Authorea see: [Authorea Help Center](https://intercom.help/authorea/).
+I provide a brief overview of Authorea, the tool we plan to use for the collaborative writing projects. The slides also include a small introduction to Git/GitHub. For more information about the features and applications of Authorea see: [Authorea Help Center](https://intercom.help/authorea/).
 
 ### [Introduction to Data Analytics using Python](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/lecture.ipynb#/) by [tobiasraabe](https://github.com/tobiasraabe)
 
