@@ -15,16 +15,16 @@
 %\renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
 
 
-\begin{document}      
+\begin{document}
 \begin{frame}
 \maketitle
 \end{frame}
 
-% \section{Overview on the Generalized Roy Model}\label{overview-on-the-generalized-roy-model} 
-%\begin{frame}       
+% \section{Overview on the Generalized Roy Model}\label{overview-on-the-generalized-roy-model}
+%\begin{frame}
 %\frametitle{Overview on the Generalized Roy Model}
  %\centering
-%\ldots{} background material available at \\ https://github.com/policyMetrics/talks 
+%\ldots{} background material available at \\ https://github.com/policyMetrics/talks
 
 
 \begin{frame}
@@ -108,7 +108,7 @@ where
 Observed outcome for individual \(i\):
 
 \begin{align*}
-Y_i = Y_{0i} + D_i (Y_{1i} - Y_{0i}) = 
+Y_i = Y_{0i} + D_i (Y_{1i} - Y_{0i}) =
 \begin{cases}
 Y_{1i} & \text{if}\quad D_i = 1 \\
 Y_{0i} & \text{if}\quad D_i = 0 \\
@@ -126,7 +126,7 @@ Y_{0i} & \text{if}\quad D_i = 0 \\
 \mu_S(X, Z) & = (\mu_1(X) - \mu_0(X)) - \mu_C(Z) \\
 V & = U_C - (U_1 - U_0) \\
 P(X, Z) & = \Pr(D = 1 \mid X, Z)  = F_V(\mu_S(X, Z)) \\
-U_s & = F_V(V) 
+U_s & = F_V(V)
 \end{align*}
 
 Rewriting Choice Equation
@@ -152,7 +152,7 @@ Y_1 - Y_0 = (\mu_1(X) - \mu_0(X)) + (U_1 - U_0)\\
 	\item Difference in Observable Characteristics
 	\item Difference in Unobservable Characteristics
 	\begin{itemize}
-		\item  Uncertainty 
+		\item  Uncertainty
 		\item Private Information
 	\end{itemize}
 \end{itemize}
@@ -179,7 +179,7 @@ Y_1 - Y_0 / D\quad \mid X = x.
 \begin{frame}
 
 \begin{figure}[htp]\centering
-	\caption{Conditional Expectation}\label{eh-Conditional Expectation}\scalebox{0.35}{\includegraphics{./material/fig-eh-conditional-expectation.png}}
+	\caption{Conditional Expectation}\label{eh-Conditional Expectation}\scalebox{0.35}{\includegraphics{fig-eh-conditional-expectation.png}}
 \end{figure}
 
 \end{frame}
@@ -235,21 +235,21 @@ E[Y\mid D = 1] - E[Y\mid D = 0] & = \underbrace{E[Y_1 - Y_0\mid D = 1]}_{B^{TT}}
 
 
 \begin{frame}
-%\frametitle{Treatment Effects with Essential Heterogeneity} 
+%\frametitle{Treatment Effects with Essential Heterogeneity}
 
 \begin{figure}[htp]\centering
-	\caption{Treatment Effects with Essential Heterogeneity}\label{Treatment Effects Conventional}\scalebox{0.35}{\includegraphics{./material/fig-treatment-effects-conventional.png}}
+	\caption{Treatment Effects with Essential Heterogeneity}\label{Treatment Effects Conventional}\scalebox{0.35}{\includegraphics{fig-treatment-effects-conventional.png}}
 \end{figure}
 
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Treatment Effects without Essential Heterogeneity} 
+%\frametitle{Treatment Effects without Essential Heterogeneity}
 
 \begin{figure}[htp]\centering
 	\caption{Treatment Effects without Essential Heterogeneity}\label{Treatment Effects Without Essential Heterogeneity}\scalebox{0.35}
-	{\includegraphics{./material/fig-treatment-effects-without-eh.png}}
+	{\includegraphics{fig-treatment-effects-without-eh.png}}
 \end{figure}
 
 \end{frame}
@@ -257,7 +257,7 @@ E[Y\mid D = 1] - E[Y\mid D = 0] & = \underbrace{E[Y_1 - Y_0\mid D = 1]}_{B^{TT}}
 
 \begin{frame}
     \subsubsection{Policy - Relevant Average Treatment Effect}\label{policy---relevant-average-treatment-effect}
-\frametitle{Policy - Relevant Average Treatment Effect}   
+\frametitle{Policy - Relevant Average Treatment Effect}
 
 \textbf{Observed Outcomes}
 
@@ -290,22 +290,22 @@ quantile \(u_S\) of the first-stage unobservable \(V\).
 
 
 \begin{frame}
-%\frametitle{Treatment Effects with Essential Heterogeneity} 
+%\frametitle{Treatment Effects with Essential Heterogeneity}
 
 \begin{figure}[htp]\centering
 	\caption{Treatment Effects: Margin of Indifference}\label{Margin Indifference}\scalebox{0.35}
-	{\includegraphics{./material/fig-margin-indifference.png}}
+	{\includegraphics{fig-margin-indifference.png}}
 \end{figure}
 
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Treatment Effects with Essential Heterogeneity} 
+%\frametitle{Treatment Effects with Essential Heterogeneity}
 
 \begin{figure}[htp]\centering
 	\caption{Marginal Effect of Heterogeneity}\label{Marginal Effect of Heterogeneity}\scalebox{0.35}
-	{\includegraphics{./material/fig-eh-marginal-effect.png}}
+	{\includegraphics{fig-eh-marginal-effect.png}}
 \end{figure}
 
 \end{frame}
@@ -344,12 +344,12 @@ and integrate to one.
 
 \begin{figure}[htp]\centering
 	\caption{Effects of Treatment as Weighted Averages}\label{Effects of Treatment as Weighted Averages}\scalebox{0.35}
-	{\includegraphics{./material/fig-weights-marginal-effect.png}}
+	{\includegraphics{fig-weights-marginal-effect.png}}
 \end{figure}
 
 \end{frame}
 
-   
+
 \begin{frame}
 %\subsubsection{Local Average Treatment Effect}\label{local-average-treatment-effect}
 \frametitle{Local Average Treatment Effect}
@@ -372,21 +372,21 @@ B^{LATE} = \frac{E(Y\mid Z = z) - E[Y \mid Z = z^\prime]}{P(z) - P(z^\prime)}
 B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\prime}} B^{MTE}(x, u) du,
 \end{align*}
 
-\end{frame} 
- 
- 
+\end{frame}
+
+
 \begin{frame}
 %\frametitle{Local Average Treatment Effect}
 
 \begin{figure}[htp]\centering
 	\caption{Local Average Treatment Effect}\label{Local Average Treatment}\scalebox{0.35}
-	{\includegraphics{./material/fig-local-average-treatment.png}}
+	{\includegraphics{fig-local-average-treatment.png}}
 \end{figure}
 
-\end{frame} 
- 
- 
-\begin{frame}  
+\end{frame}
+
+
+\begin{frame}
 %\subsubsection{Distributional Effects of Treatment}\label{distributional-effects-of-treatment}
 \frametitle{Distributional Effects of Treatment}
 
@@ -405,7 +405,7 @@ B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\
 
 \begin{figure}[htp]\centering
 	\caption{Distribution of Benefits}\label{Treatment Effects Benefits}\scalebox{0.35}
-	{\includegraphics{./material/fig-treatment-effects-benefits.png}}
+	{\includegraphics{fig-treatment-effects-benefits.png}}
 \end{figure}
 
 \end{frame}
@@ -416,7 +416,7 @@ B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\
 
 \begin{figure}[htp]\centering
 	\caption{Joint Distribution of Potential Outcomes}\label{Treatment Effects Benefits}\scalebox{0.80}
-	{\includegraphics{./material/fig-distribution-potential_wolabel.png}}
+	{\includegraphics{fig-distribution-potential.png}}
 \end{figure}
 
 \end{frame}
@@ -427,7 +427,7 @@ B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\
 
 \begin{figure}[htp]\centering
 	\caption{Joint Distribution of Surplus and Benefits}\label{Treatment Effects Benefits}\scalebox{0.80}
-	{\includegraphics{./material/fig-distribution-surplus_wolabel.png}}
+	{\includegraphics{fig-distribution-surplus.png}}
 \end{figure}
 
 \end{frame}
@@ -437,17 +437,17 @@ B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\
 \frametitle{Teaching Tool}
 
 \begin{figure}[htp]\centering
-	\includegraphics[width=\textwidth]{./material/fig-online-documentation.png}
+	\includegraphics[width=\textwidth]{fig-online-documentation.png}
 %\caption{Teaching Tool}\label{Teaching Tool}
-%\scalebox{0.18}{\includegraphics{./material/fig-online-documentation.png}}
+%\scalebox{0.18}{\includegraphics{fig-online-documentation.png}}
 \end{figure}
 
 \end{frame}
 
 
 
-    % Add a bibliography block to the postdoc  
-    
+    % Add a bibliography block to the postdoc
+
 
 %!TEX root = ../main.tex
 \beginbackup
@@ -469,8 +469,7 @@ B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\
 \nocite{Abbring.2007,Carneiro.2003,Carneiro.2011,Heckman.2001g,Heckman.2008a,Heckman.1997,Heckman.2006d,Heckman.2001d,Heckman.2001e,Heckman.2005e,Heckman.2007e,Heckman.2007f,Roy.1951}
 
 \bibliographystyle{apalike}
-\bibliography{../submodules/bibliography/literature}
-%\bibliography{../../../submodules/bibliography/literature}
+\bibliography{../../submodules/bibliography/literature}
 
 
 \end{frame}
