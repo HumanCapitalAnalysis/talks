@@ -147,29 +147,9 @@ k_{s + x} = \kappa\left( 1 - \frac{x}{T}\right),\text{where} \quad x = t - s
 \end{frame}
 
 \begin{frame}
-\begin{equation}
-\ln P_{x+s}  \approx ln P_0 + sþ_s + P_0 \sum_{j=1}^{x} \kappa \left(1-\frac{j}{T}\right)
-\end{equation}
-further decomposing experience addition
-\begin{align*}
-P_0 \sum_{j=1}^{x} \kappa \left(1-\frac{j}{T}\right) & = P_0 \sum_{j=1}^{x} \kappa - P_0 \sum_{j=1}^{x} \left(\frac{j}{T}\right) \\
- &  = P_0 \kappa x - \frac{P_0}{T} \sum_{j=1}^{x} j
-\end{align*}
-\end{frame}
-\begin{frame}
-using result on sum of arithmetic series
-\begin{align*}
-= P_0 \kappa x - \frac{P_0}{T} x \left(\frac{1+x}{2} \right) & = P_0 \kappa x - \frac{P_0}{2T}x - \frac{P_0}{2T} x² \\
- & = \left(P_0 \kappa - \frac{P_0}{2T}\right) x - \frac{P_0}{2T} x²
- \end{align*}
- substituting back into $(1)$
  \begin{align*}
  \ln P_{x + s}  \approx \ln P_0 + s\rho_s + \left(\rho_0 \kappa + \frac{\rho_0\kappa}{2T}\right)x - \frac{\rho_0\kappa}{2T} x^2 \\
  \end{align*}
-
-
-\end{frame}
-\begin{frame}
 Accounting for the difference in potential and observed earnings:
 \begin{align*}
 \ln Y(s, x) & = \ln P_{x + s} - \kappa\left(1 - \frac{x}{T}\right) \\
