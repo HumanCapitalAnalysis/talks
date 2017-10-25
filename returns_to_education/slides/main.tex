@@ -11,6 +11,47 @@
 
 \begin{document}
 \maketitle
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+\LARGE\textit{Housekeeping}
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+
+\begin{frame}
+\textbf{Lecture Material}
+\begin{itemize}
+\item constantly updated and available at\vspace{0.2cm}
+\begin{center}\url{https://github.com/policyMetrics/talks}\end{center}\vspace{0.2cm}
+\item for additional material be sure to check out \vspace{0.2cm}
+\begin{center}\url{https://github.com/policyMetrics/course/wiki}\end{center}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\begin{figure}
+\caption{Book Recommendations}
+\subfloat[]{
+\scalebox{0.3}{\includegraphics{fig-academic-writing-1}}}\hspace{0.5cm}
+\subfloat[]{
+\scalebox{0.3}{\includegraphics{fig-academic-writing-2}}}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\begin{figure}
+\caption{Book Recommendations}
+\subfloat[]{
+\scalebox{0.3}{\includegraphics{fig-academic-presentation-1}}}\hspace{0.5cm}
+\subfloat[]{
+\scalebox{0.3}{\includegraphics{fig-academic-research-1}}}
+\end{figure}
+\end{frame}
+
+\maketitle
 
  \begin{frame}
 
@@ -298,14 +339,95 @@ $\Rightarrow$ If the schooling decision is determined by individual returns, the
 In the end, \citet{Heckman.2006a} conclude:\vspace{0.5cm}
 
 \begin{quote}
-In common usage, the coefficient on schooling in a regression of log earnings on
-years of schooling is often called a rate of return. In fact, it is a price of schooling from
-a hedonic market wage equation. It is a growth rate of market earnings with years of
-schooling and not an internal rate of return measure, except under stringent conditions
-which we specify, test and reject in this chapter.
+In common usage, the coefficient on schooling in a regression of log earnings on years of schooling is often called a rate of return. In fact, it is a price of schooling from a hedonic market wage equation. It is a growth rate of market earnings with years of schooling and not an internal rate of return measure, except under stringent conditions which we specify, test and reject in this chapter.
 \end{quote}
 \end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+\LARGE\textit{Estimating Internal Rates of Return}
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}
+\textbf{Income Maximization under Perfect Certainty \citep{Rosen.1977,Willis.1986}}
+\begin{align*}
+s               &\qquad\text{schooling level} \\
+x               &\qquad\text{experience level} \\
+Y(s, x)         &\qquad\text{wage income} \\
+T(s)            &\qquad\text{last age of earnings} \\
+v               &\qquad\text{tuition and psychic cost of schooling} \\
+\tau            &\qquad\text{proportional tax rate} \\
+r               &\qquad\text{before-tax interest rate}
+\end{align*}
+\end{frame}
 
+\begin{frame}
+\textbf{Present Discounted Value fo Lifetime Earnings}
+\begin{align*}
+V(s) = & \int_0^{T(s) - s} (1 - \tau) \exp^{-(1 - \tau)r(x + s)} Y(s,x) dx \\
+       & - \int^s_0 v\exp^{-(1 - \tau)rz}dz
+\end{align*}
+\end{frame}
+
+
+\begin{frame}
+First-Order Condition
+\begin{align*}
+& [T^\prime(s) - 1]\exp^{-(1 - \tau)r(T(s) - s)} Y(s, T(s) - s) \\
+& - (1 - \tau)r\int^{T(s) - s}_0 \exp^{-(1 - \tau)rx} Y(s, x)dx \\
+& + \int_0^{T(s) - s} \exp^{-(1 - \tau) rx} \frac{\partial Y(s, x)}{\partial s}dx \\
+& - \frac{v}{ 1  -\tau} = 0
+\end{align*}
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+\LARGE\textit{Empirical Evidence}
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}[plain]
+\begin{center}
+\scalebox{0.5}{\includegraphics{tab-irr-specifications-white}}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\scalebox{0.5}{\includegraphics{tab-irr-specifications-black}}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\scalebox{0.5}{\includegraphics{tab-irr-specifications-cost}}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\scalebox{0.75}{\includegraphics{fig-college-tuition}}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\scalebox{0.75}{\includegraphics{fig-marginal-taxes}}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\scalebox{0.75}{\includegraphics{fig-irr-high-school}}
+\end{center}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{center}
+\scalebox{0.75}{\includegraphics{fig-irr-college}}
+\end{center}
+\end{frame}
 
 %!TEX root = ../main.tex
 \beginbackup\appendix
