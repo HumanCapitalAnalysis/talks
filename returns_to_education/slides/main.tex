@@ -31,6 +31,10 @@
 \end{frame}
 
 \begin{frame}
+There will be no lecture on the 16th of November, all lectures will simply be postponed by one week.
+\end{frame}
+
+\begin{frame}
 \begin{figure}
 \caption{Book Recommendations}
 \subfloat[]{
@@ -236,6 +240,8 @@ $\Rightarrow$ If the schooling decision is determined by individual returns, the
 
 
 
+
+
 \begin{frame}[plain]
 
 \begin{center}
@@ -365,8 +371,8 @@ r               &\qquad\text{before-tax interest rate}
 \begin{frame}
 \textbf{Present Discounted Value fo Lifetime Earnings}
 \begin{align*}
-V(s) = & \int_0^{T(s) - s} (1 - \tau) \exp^{-(1 - \tau)r(x + s)} Y(s,x) dx \\
-       & - \int^s_0 v\exp^{-(1 - \tau)rz}dz
+V(s) = & \int_0^{T(s) - s} (1 - \tau) e^{-(1 - \tau)r(x + s)} Y(s,x) dx \\
+       & - \int^s_0 ve^{-(1 - \tau)rz}dz
 \end{align*}
 \end{frame}
 
@@ -374,12 +380,127 @@ V(s) = & \int_0^{T(s) - s} (1 - \tau) \exp^{-(1 - \tau)r(x + s)} Y(s,x) dx \\
 \begin{frame}
 First-Order Condition
 \begin{align*}
-& [T^\prime(s) - 1]\exp^{-(1 - \tau)r(T(s) - s)} Y(s, T(s) - s) \\
-& - (1 - \tau)r\int^{T(s) - s}_0 \exp^{-(1 - \tau)rx} Y(s, x)dx \\
-& + \int_0^{T(s) - s} \exp^{-(1 - \tau) rx} \frac{\partial Y(s, x)}{\partial s}dx \\
+& [T^\prime(s) - 1]e^{-(1 - \tau)r(T(s) - s)} Y(s, T(s) - s) \\
+& - (1 - \tau)r\int^{T(s) - s}_0 e^{-(1 - \tau)rx} Y(s, x)dx \\
+& + \int_0^{T(s) - s} e^{-(1 - \tau) rx} \frac{\partial Y(s, x)}{\partial s}dx \\
 & - \frac{v}{ 1  -\tau} = 0
 \end{align*}
 \end{frame}
+
+
+\begin{frame}
+Rearranging ...
+\begin{align}
+\tilde{r} & = \frac{[T^\prime(s) - 1]e^{-\tilde{r}(T(s) - s)}Y(s, T(s) - s )}{\int_0^{T(s) - s} e^{-\tilde{r}x}Y(s, x) dx} \\
+          & + \frac{\int_0^{T(s) - s}e^{-\tilde{r}x}\left[\frac{\partial Y(s, x)}{\partial s}\right] dx}{\int_0^{T(s) - s}e^{-\tilde{r}x}Y(s, x) dx} \\
+          & - \frac{\frac{v}{1-\tau}}{\int_0^{T(s) - s}e^{-\tilde{r}x}Y(s, x)dx}
+\end{align}
+\end{frame}
+
+\begin{frame}
+Interpretation
+\begin{itemize}
+\item (1) -- lifetime-earnings effect - the change in the present value of earnings due to a change in working-life with additional schooling (expressed) as a fraction of the present value of earnings measured at age $s$
+\item (2) -- weighted average effect of schooling on log earnings by experience
+\item (3) -- tuition and psychic costs expressed as a fraction of lifetime income measured at age $s$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+Getting back to Mincer ...
+\begin{itemize}
+\item no tuition and psychic costs of schooling \\
+    $\qquad\Rightarrow v = 0$
+\item no loss of working life from schooling \\
+    $\qquad\Rightarrow T^\prime(s) = 1$
+\item multiplicative separability between schooling and experience component of earnings \\
+    $\qquad\Rightarrow Y(s, x) = \mu(s)\psi(x)$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{align*}
+\tilde{r} = \frac{\mu^\prime(s)}{\mu(s)}\quad\forall\quad s\\
+\end{align*}
+
+Thus, wage growth must be log linear in schooling and $\mu(s) = \mu(0)e^{\tilde{r}s}$
+\end{frame}
+
+
+
+
+\begin{frame}
+\citet{Heckman.2006a} thus establish ... \vspace{0.5cm}
+
+\begin{quote}
+After allowing for taxes, tuition, variable length of working life, and a flexible relationship between earnings, schooling and experience, the coefficient on years of schooling in a log earnings regression need no longer equal the internal rate of return.
+\end{quote}
+\end{frame}
+
+
+\begin{frame}\textbf{Structural Approach for the IRR}\vspace{0.3cm}\\
+
+The internal rate of return for schooling level $s_1$ versus $s_2$, $r(s_1, s_2)$ solves ...
+
+\begin{align*}
+&\int_{0}^{T(s_1) - s_1} (1 - \tau)e^{-r(x + s_1)}Y(s_1, x) dx  - \int_{0}^{s_1} v e^{-r z} dz\\
+&\qquad\qquad =  \int_{0}^{T(s_2) - s_2} (1 - \tau)e^{-r(x + s_2)}Y(s_2, x) dx - \int_{0}^{s_2} v e^{-r z} dz
+\end{align*}
+
+\end{frame}
+
+\begin{frame}
+Back to Mincer ....
+
+\begin{itemize}
+\item no taxes and no direct or psychic costs of schooling \\\vspace{0.3cm}
+\hspace{0.3cm}$\Rightarrow\quad v = 0$ and $\tau = 0$\vspace{0.3cm}
+\begin{align*}
+&\int_{0}^{T(s_1) - s_1} e^{-r(x + s_1)}Y(s_1, x) dx  = \int_{0}^{T(s_2) - s_2} e^{-r(x + s_2)}Y(s_2, x) dx
+\end{align*}
+\end{itemize}\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item equal work-lives irrespective of years of schooling \\\vspace{0.3cm}
+\hspace{0.3cm}$\Rightarrow\quad T = T(s_1) - s_1 = T(s_2) - s_2$\vspace{0.3cm}
+\begin{align*}
+&\int_{0}^T e^{-r(x + s_1)}Y(s_1, x) dx  = \int_{0}^T e^{-r(x + s_2)}Y(s_2, x) dx
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{itemize}
+\item parallelism in experience across schooling categories \\\vspace{0.3cm}
+\hspace{0.3cm}$\Rightarrow\quad Y(s, x) = \mu(s)\psi(x)$\vspace{0.3cm}
+\begin{align*}
+&\int_{0}^T e^{-r(x + s_1)} \mu(s)\psi(x) dx  = \int_{0}^T e^{-r(x + s_2)} \mu(s)\psi(x)dx
+\end{align*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{itemize}
+\item linearity of log earnings in schooling \\\vspace{0.3cm}
+\hspace{0.3cm}$\Rightarrow\quad \mu(s) = \mu(0)e^{\rho_s s}$\vspace{0.3cm}
+\begin{align*}
+&\int_{0}^T e^{-r(x + s_1)} \mu(0)e^{\rho_s s_1}\psi(x) dx  = \int_{0}^T e^{-r(x + s_2)} \mu(0)e^{\rho_s s_2}\psi(x)dx
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+After some further rearranging ...
+\begin{align*}
+e^{(\rho_s - r)s_1} & = e^{(\rho_s - r) s_2} \\
+\Rightarrow \rho_s  & = r
+\end{align*}
+\end{frame}
+
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
 \begin{frame}\begin{center}
