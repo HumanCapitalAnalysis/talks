@@ -123,16 +123,16 @@ Y_{0i} & \text{if}\quad D_i = 0 \\
 %\subsubsection{Useful Notation}\label{useful-notation}
 
 \begin{align*}
-\mu_S(X, Z) & = (\mu_1(X) - \mu_0(X)) - \mu_C(Z) \\
+\mu_D(X, Z) & = (\mu_1(X) - \mu_0(X)) - \mu_C(Z) \\
 V & = U_C - (U_1 - U_0) \\
-P(X, Z) & = \Pr(D = 1 \mid X, Z)  = F_V(\mu_S(X, Z)) \\
-U_s & = F_V(V)
+P(X, Z) & = \Pr(D = 1 \mid X, Z)  = F_V(\mu_D(X, Z)) \\
+U_D & = F_V(V)
 \end{align*}
 
 Rewriting Choice Equation
 
 \begin{align*}
-D = \mathrm{I}[P(X,Z) > U_S]
+D = \mathrm{I}[P(X,Z) > U_D]
 \end{align*}
 
 \end{frame}
@@ -168,7 +168,7 @@ Y_1 - Y_0 = (\mu_1(X) - \mu_0(X)) + (U_1 - U_0)\\
 gains unobservable by the econometrician. More formally,
 
 \begin{align*}
-Y_1 - Y_0 / D\quad \mid X = x.
+Y_1 - Y_0 \notindep D\quad \mid X = x.
 \end{align*}
 
 \(\Rightarrow\) consequences for the choice of the estimation strategy
@@ -280,11 +280,11 @@ B^{PRTE} = \frac{1}{E[D_A] - E[D_B]} (E[Y_A] - E[Y_B])
 \frametitle{Marginal Benefit of Treatment}
 
 \begin{align*}
-B^{MTE}(x, u_S) = E [Y_1 - Y_0 \mid X = x, U_S = u_S]
+B^{MTE}(x, u_D) = E [Y_1 - Y_0 \mid X = x, U_D = u_D]
 \end{align*}
 
 \textbf{Intuition:} Mean gross return to treatment for persons at
-quantile \(u_S\) of the first-stage unobservable \(V\).
+quantile \(u_D\) of the first-stage unobservable \(V\).
 
 \end{frame}
 
@@ -316,13 +316,13 @@ quantile \(u_S\) of the first-stage unobservable \(V\).
 \frametitle{Effects of Treatment as Weighted Averages}
 
 Parameter \(\Delta_j\), can be written as a weighted average of the
-\(B^{MTE}(x, u_S)\).
+\(B^{MTE}(x, u_D)\).
 
 \begin{align*}
-\Delta_j(x) = \int_0^1 B^{MTE}(x, u_S) \omega^j(x, u_S) du_S,
+\Delta_j(x) = \int_0^1 B^{MTE}(x, u_D) \omega^j(x, u_D) du_D,
 \end{align*}
 
-where the weights \(\omega^j(x, u_S)\) are specific to parameter \(j\)
+where the weights \(\omega^j(x, u_D)\) are specific to parameter \(j\)
 and integrate to one.
 \end{frame}
 
@@ -331,9 +331,9 @@ and integrate to one.
 \textbf{Weights}
 
 \begin{align*}
- \omega^{ATE}(x, u_S) & = 1 \\
- \omega^{TT}(x, u_S) & = \frac{1 - F_{P\mid X=x}(u_S)}{E[P \mid X = x]}\\
- \omega^{TUT}(x, u_S) & = \frac{F_{P\mid X=x}(u_S)}{E[1 - P \mid X = x]}
+ \omega^{ATE}(x, u_D) & = 1 \\
+ \omega^{TT}(x, u_D) & = \frac{1 - F_{P\mid X=x}(u_D)}{E[P \mid X = x]}\\
+ \omega^{TUT}(x, u_D) & = \frac{F_{P\mid X=x}(u_D)}{E[1 - P \mid X = x]}
 \end{align*}
 
 \end{frame}
@@ -369,7 +369,7 @@ B^{LATE} = \frac{E(Y\mid Z = z) - E[Y \mid Z = z^\prime]}{P(z) - P(z^\prime)}
 \end{align*}
 
 \begin{align*}
-B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\prime}} B^{MTE}(x, u) du,
+B^{LATE}(x, u_D, u_{D^\prime}) = \frac{1}{u_D - u_{S^\prime}} \int_{u_D}^{u_{S^\prime}} B^{MTE}(x, u) du,
 \end{align*}
 
 \end{frame}
