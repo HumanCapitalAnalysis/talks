@@ -90,8 +90,10 @@ We will look at two papers that explore structural estimations of the returns to
 \begin{frame}
 Why are returns to education important?
 \begin{itemize}
-\item help explain wage inequality
-\item judge relative profitability of investment in education?
+\item explain wage inequality within countries
+\item explain growth differentials across countries
+\item assess schooling investment on individual level
+\item evaluate public policies to foster educational attainment
 \item ...
 \end{itemize}
 \end{frame}
@@ -389,7 +391,7 @@ First-Order Condition
 
 
 \begin{frame}
-Rearranging ...
+Rearranging and defining $\tilde{r} = (1 - \tau)r$ ...
 \begin{align}
 \tilde{r} & = \frac{[T^\prime(s) - 1]e^{-\tilde{r}(T(s) - s)}Y(s, T(s) - s )}{\int_0^{T(s) - s} e^{-\tilde{r}x}Y(s, x) dx} \\
           & + \frac{\int_0^{T(s) - s}e^{-\tilde{r}x}\left[\frac{\partial Y(s, x)}{\partial s}\right] dx}{\int_0^{T(s) - s}e^{-\tilde{r}x}Y(s, x) dx} \\
@@ -400,10 +402,11 @@ Rearranging ...
 \begin{frame}
 Interpretation
 \begin{itemize}
-\item (1) -- lifetime-earnings effect - the change in the present value of earnings due to a change in working-life with additional schooling (expressed) as a fraction of the present value of earnings measured at age $s$
-\item (2) -- weighted average effect of schooling on log earnings by experience
-\item (3) -- tuition and psychic costs expressed as a fraction of lifetime income measured at age $s$
+\item (1) ... the change in the present value of earnings due to a change in working-life with additional schooling
+\item (2) ... weighted average effect of schooling on log earnings by experience
+\item (3) ... tuition and psychic costs expressed as a fraction of lifetime income measured at age $s$
 \end{itemize}
+All components are expressed as a fraction of the present value of earnings measured at age $s$
 \end{frame}
 
 
@@ -456,7 +459,7 @@ Back to Mincer ....
 
 \begin{itemize}
 \item no taxes and no direct or psychic costs of schooling \\\vspace{0.3cm}
-\hspace{0.3cm}$\Rightarrow\quad v = 0$ and $\tau = 0$\vspace{0.3cm}
+\hspace{0.3cm}$\Rightarrow v = 0$ and $\tau = 0$\vspace{0.3cm}
 \begin{align*}
 &\int_{0}^{T(s_1) - s_1} e^{-r(x + s_1)}Y(s_1, x) dx  = \int_{0}^{T(s_2) - s_2} e^{-r(x + s_2)}Y(s_2, x) dx
 \end{align*}
@@ -465,7 +468,7 @@ Back to Mincer ....
 \begin{frame}
 \begin{itemize}
 \item equal work-lives irrespective of years of schooling \\\vspace{0.3cm}
-\hspace{0.3cm}$\Rightarrow\quad T = T(s_1) - s_1 = T(s_2) - s_2$\vspace{0.3cm}
+\hspace{0.3cm}$\Rightarrow T = T(s_1) - s_1 = T(s_2) - s_2$\vspace{0.3cm}
 \begin{align*}
 &\int_{0}^T e^{-r(x + s_1)}Y(s_1, x) dx  = \int_{0}^T e^{-r(x + s_2)}Y(s_2, x) dx
 \end{align*}
@@ -475,7 +478,7 @@ Back to Mincer ....
 \begin{frame}
 \begin{itemize}
 \item parallelism in experience across schooling categories \\\vspace{0.3cm}
-\hspace{0.3cm}$\Rightarrow\quad Y(s, x) = \mu(s)\psi(x)$\vspace{0.3cm}
+\hspace{0.3cm}$\Rightarrow Y(s, x) = \mu(s)\psi(x)$\vspace{0.3cm}
 \begin{align*}
 &\int_{0}^T e^{-r(x + s_1)} \mu(s)\psi(x) dx  = \int_{0}^T e^{-r(x + s_2)} \mu(s)\psi(x)dx
 \end{align*}
