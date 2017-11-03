@@ -2,58 +2,33 @@
 
 \input{header.tex}
 
-
 \title{Generalized Roy Model}
-\author{\textbf{Philipp Eisenhauer}}
-\date{\parbox{\linewidth}{\centering%
-  \ldots{} background material available at \endgraf
- {\urlstyle{same}\url{{https://github.com/policyMetrics/talks}}}}}
-
-
-
+\author{Philipp Eisenhauer}
+\date{}
 \let\otp\titlepage
 %\renewcommand{\titlepage}{\otp\addtocounter{framenumber}{-1}}
 
 
-\begin{document}
+\begin{document}      
+
+
 \begin{frame}
 \maketitle
 \end{frame}
 
-% \section{Overview on the Generalized Roy Model}\label{overview-on-the-generalized-roy-model}
-%\begin{frame}
-%\frametitle{Overview on the Generalized Roy Model}
- %\centering
-%\ldots{} background material available at \\ https://github.com/policyMetrics/talks
-
 
 \begin{frame}
-%\subsubsection{Policy Evaluation Tasks}\label{policy-evaluation-tasks}
-\frametitle{Policy Evaluation Tasks}
 \textbf{Heckman (2008) defines three policy evaluation tasks:}
-
 \begin{itemize}
-\item
-  Evaluating the impact of historical interventions on outcomes
-  including their impact in terms of well-being of the treated and the
-  society at large.
-\item
-  Forecasting the impact of historical interventions implemented in one
-  environment in other environments, including their impact in terms of
-  well-being.
-\item
-  Forecasting the impacts of interventions never historically
-  experienced to various environments, including their impact on
-  well-being.
+\item Evaluating the impact of historical interventions on outcomes including their impact in terms of well-being of the treated and the  society at large.
+\item Forecasting the impact of historical interventions implemented in one environment in other environments, including their impact in terms of well-being.
+\item Forecasting the impacts of interventions never historically experienced to various environments, including their impact on well-being.
 \end{itemize}
-
 \end{frame}
 
 
 \begin{frame}
-%\subsection{The Generalized Roy Model}\label{the-generalized-roy-model}
-\frametitle{The Generalized Roy Model}
-
+\textbf{The Generalized Roy Model}
 \begin{align*}
 \textbf{Potential Outcomes} &\qquad \textbf{Cost} \\
 Y_1 = \mu_1(X) + U_1      &\qquad C = \mu_D(Z) + U_C \\
@@ -63,15 +38,11 @@ Y_0 = \mu_0(X) + U_0      &\qquad \\
 Y = D Y_1 + (1 - D)Y_0 &\qquad S = Y_1 - Y_0 - C \\
                        &\qquad D = \mathrm{I}[S > 0] \\
 \end{align*}
-
 \end{frame}
 
 
 \begin{frame}
-\frametitle{The Generalized Roy Model}
 \textbf{Conventional Notation}
-%\subsubsection{Conventional Notation}\label{conventional-notation}
-
 \begin{align*}
 Y = \alpha + \beta D + \epsilon,
 \end{align*}
@@ -81,380 +52,278 @@ where
 \beta  & = (Y_1 - Y_0) =\mu_1(X) - \mu_0(X)  + (U_1 - U_0)\\
 \epsilon & =U_0
 \end{align*}
-
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Econometric Problems}
-%\subsubsection{Econometric Problems}\label{econometric-problems}
-
+\textbf{Econometric Problems}
 \begin{itemize}
-\item
-  \textbf{Evaluation Problem:} We only observe an individual in either
-  the treated or untreated state.
-\item
-  \textbf{Selection Problem:} Individuals that select into treatment
-  different from those that do not.
+\item \textbf{Evaluation Problem:} We only observe an individual in either the treated or untreated state.
+\item \textbf{Selection Problem:} Individuals that select into treatment different from those that do not.
 \end{itemize}
-
 \end{frame}
 
 
 \begin{frame}
-%\subsubsection{Evaluation Problem}\label{evaluation-problem}
-\frametitle{Econometric Problems}
-
 Observed outcome for individual \(i\):
-
 \begin{align*}
-Y_i = Y_{0i} + D_i (Y_{1i} - Y_{0i}) =
+Y_i = Y_{0i} + D_i (Y_{1i} - Y_{0i}) = 
 \begin{cases}
 Y_{1i} & \text{if}\quad D_i = 1 \\
 Y_{0i} & \text{if}\quad D_i = 0 \\
 \end{cases}
 \end{align*}
-
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Econometric Problems}
-%\subsubsection{Useful Notation}\label{useful-notation}
-
+\textbf{Useful Notation}
 \begin{align*}
-\mu_D(X, Z) & = (\mu_1(X) - \mu_0(X)) - \mu_C(Z) \\
+\mu_S(X, Z) & = (\mu_1(X) - \mu_0(X)) - \mu_C(Z) \\
 V & = U_C - (U_1 - U_0) \\
-P(X, Z) & = \Pr(D = 1 \mid X, Z)  = F_V(\mu_D(X, Z)) \\
-U_D & = F_V(V)
+P(X, Z) & = \Pr(D = 1 \mid X, Z)  = F_V(\mu_S(X, Z)) \\
+U_s & = F_V(V) 
 \end{align*}
-
 Rewriting Choice Equation
-
 \begin{align*}
-D = \mathrm{I}[P(X,Z) > U_D]
+D = \mathrm{I}[P(X,Z) > U_S]
 \end{align*}
-
 \end{frame}
 
 
 \begin{frame}
-%  \subsection{Agent Heterogeneity}\label{agent-heterogeneity}
-%	\subsubsection{Individual - Specific Effect of Treatment}\label{individual---specific-effect-of-treatment}
-\frametitle{Econometric Problems}
-
+\textbf{Individual-specific benefit of treatment:}
 \begin{align*}
 Y_1 - Y_0 = (\mu_1(X) - \mu_0(X)) + (U_1 - U_0)\\
 \end{align*}
-
-\textbf{Sources of Heterogeneity}
+\textbf{Sources of Heterogeneity:}
 \begin{itemize}
 	\item Difference in Observable Characteristics
 	\item Difference in Unobservable Characteristics
 	\begin{itemize}
-		\item  Uncertainty
+		\item  Uncertainty 
 		\item Private Information
 	\end{itemize}
 \end{itemize}
-
 \end{frame}
 
 
 \begin{frame}
-\frametitle{Essential Heterogeneity}
-%\subsubsection{Essential Heterogeneity}\label{essential-heterogeneity}
-
-\textbf{Definition:} Individuals select their treatment status based on
-gains unobservable by the econometrician. More formally,
-
+\textbf{Essential Heterogeneity} \\ \vspace{15pt}
+\textbf{Definition:} Individuals select their treatment status based on gains unobservable by the econometrician. More formally,
 \begin{align*}
-Y_1 - Y_0 \notindep D\quad \mid X = x.
+Y_1 - Y_0 / D\quad \mid X = x.
 \end{align*}
-
 \(\Rightarrow\) consequences for the choice of the estimation strategy
-
 \end{frame}
 
 
 \begin{frame}
-
 \begin{figure}[htp]\centering
-	\caption{Conditional Expectation}\label{eh-Conditional Expectation}\scalebox{0.35}{\includegraphics{fig-eh-conditional-expectation.png}}
+	\caption{Conditional Expectation of Observed Outcome}\label{eh-Conditional Expectation}
+	\scalebox{0.35}{\includegraphics{./material/fig-eh-conditional-expectation.png}}
 \end{figure}
-
 \end{frame}
 
 
-
-%\begin{frame}
- %\frametitle{Parameters of Interest}
-%\subsection{Parameters of Interest}\label{parameters-of-interest}
-
-%\end{frame}
-
 \begin{frame}
-%\subsubsection{Conventional TreatmentEffects}\label{conventional-treatment-effects}
-\frametitle{Conventional Treatment Effects}
-
+\textbf{Conventional Average Treatment Effects}
 \begin{align*}
 B^{ATE} & = E[Y_1 - Y_0 ]\\
 B^{TT} & = E[Y_1 - Y_0 \mid D = 1]\\
 B^{TUT} & = E[Y_1 - Y_0 \mid D = 0]\\
 \end{align*}
-
 \(\Rightarrow\) correspond to \emph{extreme} policy alternatives
-
 \end{frame}
 
 
 \begin{frame}
-%\subsubsection{Selection Problem}\label{selection-problem}
-\frametitle{Selection Problem}
-
+\textbf{Selection Problem}
 \begin{align*}
 E[Y\mid D = 1] - E[Y\mid D = 0] & = \underbrace{E[Y_1 - Y_0]}_{B^{ATE}} \\
 	 							& + \underbrace{E[Y_1 - Y_0 \mid D = 1] - E[Y_1 - Y_0]}_{\text{Sorting Gain}} \\
 								& + \underbrace{E[Y_0\mid D = 1] - E[Y_0 \mid D = 0]}_{\text{Selection Bias}}
 \end{align*}
-
 \end{frame}
 
 
 \begin{frame}
-%\subsubsection{Selection Problem}\label{selection-problem}
-\frametitle{Selection Problem}
-
 \begin{align*}
 E[Y\mid D = 1] - E[Y\mid D = 0] & = \underbrace{E[Y_1 - Y_0\mid D = 1]}_{B^{TT}} \\
-& + \underbrace{E[Y_0\mid D= 1]- E[Y_0 \mid D = 0]}_{\text{Selection Bias}}
+								& + \underbrace{E[Y_0\mid D= 1]- E[Y_0 \mid D = 0]}_{\text{Selection Bias}}
 \end{align*}
-
 \(\Rightarrow\) the bias depends on the parameter of interest
-
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Treatment Effects with Essential Heterogeneity}
-
 \begin{figure}[htp]\centering
-	\caption{Treatment Effects with Essential Heterogeneity}\label{Treatment Effects Conventional}\scalebox{0.35}{\includegraphics{fig-treatment-effects-conventional.png}}
+	\caption{Treatment Effects with Essential Heterogeneity}\label{Treatment Effects Conventional}			
+	\scalebox{0.35}{\includegraphics{./material/fig-treatment-effects-conventional.png}}
 \end{figure}
-
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Treatment Effects without Essential Heterogeneity}
-
 \begin{figure}[htp]\centering
-	\caption{Treatment Effects without Essential Heterogeneity}\label{Treatment Effects Without Essential Heterogeneity}\scalebox{0.35}
-	{\includegraphics{fig-treatment-effects-without-eh.png}}
+	\caption{Treatment Effects without Essential Heterogeneity}\label{Treatment Effects Without Essential Heterogeneity}
+	\scalebox{0.35}{\includegraphics{./material/fig-treatment-effects-without-eh.png}}
 \end{figure}
-
 \end{frame}
 
 
 \begin{frame}
-    \subsubsection{Policy - Relevant Average Treatment Effect}\label{policy---relevant-average-treatment-effect}
-\frametitle{Policy - Relevant Average Treatment Effect}
-
+\textbf{Policy-Relevant Average Treatment Effect} \\ \vspace{15pt}  
 \textbf{Observed Outcomes}
-
 \begin{align*}
 Y_B = D_B Y_1 + (1 - D_B) Y_0 \\
 Y_A = D_A Y_1 + (1 - D_A) Y_0 \\
 \end{align*}
-
 \textbf{Effect of Policy}
-
 \begin{align*}
 B^{PRTE} = \frac{1}{E[D_A] - E[D_B]} (E[Y_A] - E[Y_B])
 \end{align*}
-
 \end{frame}
 
 
 \begin{frame}
-    \subsubsection{Marginal Benefit of Treatment}\label{marginal-benefit-of-treatment}
-\frametitle{Marginal Benefit of Treatment}
-
+\textbf{Marginal Benefit of Treatment}
 \begin{align*}
-B^{MTE}(x, u_D) = E [Y_1 - Y_0 \mid X = x, U_D = u_D]
+B^{MTE}(x, u_S) = E [Y_1 - Y_0 \mid X = x, U_S = u_S]
 \end{align*}
-
-\textbf{Intuition:} Mean gross return to treatment for persons at
-quantile \(u_D\) of the first-stage unobservable \(V\).
-
+\textbf{Intuition:} Mean gross return to treatment for persons at quantile \(u_S\) of the first-stage unobservable \(V\).
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Treatment Effects with Essential Heterogeneity}
-
 \begin{figure}[htp]\centering
-	\caption{Treatment Effects: Margin of Indifference}\label{Margin Indifference}\scalebox{0.35}
-	{\includegraphics{fig-margin-indifference.png}}
+	\caption{Margin of Indifference}\label{Margin Indifference}
+	\scalebox{0.35}{\includegraphics{./material/fig-margin-indifference.png}}
 \end{figure}
-
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Treatment Effects with Essential Heterogeneity}
-
 \begin{figure}[htp]\centering
-	\caption{Marginal Effect of Heterogeneity}\label{Marginal Effect of Heterogeneity}\scalebox{0.35}
-	{\includegraphics{fig-eh-marginal-effect.png}}
+	\caption{Marginal Effect of Treatment}\label{Marginal Effect of Heterogeneity}
+	\scalebox{0.35}{\includegraphics{./material/fig-eh-marginal-effect.png}}
 \end{figure}
-
 \end{frame}
 
 
 \begin{frame}
-%\subsubsection{Effects of Treatment as Weighted Averages}\label{effects-of-treatment-as-weighted-averages}
-\frametitle{Effects of Treatment as Weighted Averages}
-
+\textbf{Effects of Treatment as Weighted Averages} \\ \vspace{15pt}
 Parameter \(\Delta_j\), can be written as a weighted average of the
-\(B^{MTE}(x, u_D)\).
-
+\(B^{MTE}(x, u_S)\)
 \begin{align*}
-\Delta_j(x) = \int_0^1 B^{MTE}(x, u_D) \omega^j(x, u_D) du_D,
+\Delta_j(x) = \int_0^1 B^{MTE}(x, u_S) \omega^j(x, u_S) du_S,
 \end{align*}
-
-where the weights \(\omega^j(x, u_D)\) are specific to parameter \(j\)
+where the weights \(\omega^j(x, u_S)\) are specific to parameter \(j\)
 and integrate to one.
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Effects of Treatment as Weighted Averages}
 \textbf{Weights}
-
 \begin{align*}
- \omega^{ATE}(x, u_D) & = 1 \\
- \omega^{TT}(x, u_D) & = \frac{1 - F_{P\mid X=x}(u_D)}{E[P \mid X = x]}\\
- \omega^{TUT}(x, u_D) & = \frac{F_{P\mid X=x}(u_D)}{E[1 - P \mid X = x]}
+ \omega^{ATE}(x, u_S) & = 1 \\
+ \omega^{TT}(x, u_S) & = \frac{1 - F_{P\mid X=x}(u_S)}{E[P \mid X = x]}\\
+ \omega^{TUT}(x, u_S) & = \frac{F_{P\mid X=x}(u_S)}{E[1 - P \mid X = x]}
 \end{align*}
-
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Effects of Treatment as Weighted Averages}
-
 \begin{figure}[htp]\centering
-	\caption{Effects of Treatment as Weighted Averages}\label{Effects of Treatment as Weighted Averages}\scalebox{0.35}
-	{\includegraphics{fig-weights-marginal-effect.png}}
+	\caption{Treatment Effect Weights}\label{Effects of Treatment as Weighted Averages}
+	\scalebox{0.35}{\includegraphics{./material/fig-weights-marginal-effect.png}}
 \end{figure}
-
 \end{frame}
 
-
+   
 \begin{frame}
-%\subsubsection{Local Average Treatment Effect}\label{local-average-treatment-effect}
-\frametitle{Local Average Treatment Effect}
-
 \begin{itemize}
 \item \textbf{Local Average Treatment Effect:} Average effect for those induced
-to change treatment because of a change in the instrument.
-\(\Rightarrow\) instrument-dependet parameter
-
+to change treatment because of a change in the instrument. \\
+\(\Rightarrow\) instrument-dependent parameter
 \item \textbf{Marginal Treatment Effect:} Average effect for those individuals
 with a given unobserved desire to receive treatment.\\
 \(\Rightarrow\) deep economic parameter
 \end{itemize}
+\end{frame}
 
-    \begin{align*}
+
+\begin{frame}
+\begin{align*}
 B^{LATE} = \frac{E(Y\mid Z = z) - E[Y \mid Z = z^\prime]}{P(z) - P(z^\prime)}
 \end{align*}
-
 \begin{align*}
-B^{LATE}(x, u_D, u_{D^\prime}) = \frac{1}{u_D - u_{S^\prime}} \int_{u_D}^{u_{S^\prime}} B^{MTE}(x, u) du,
+B^{LATE}(x, u_S, u_{S^\prime}) = \frac{1}{u_S - u_{S^\prime}} \int_{u_S}^{u_{S^\prime}} B^{MTE}(x, u) du
 \end{align*}
-
-\end{frame}
-
-
+\end{frame} 
+ 
+ 
 \begin{frame}
-%\frametitle{Local Average Treatment Effect}
-
 \begin{figure}[htp]\centering
-	\caption{Local Average Treatment Effect}\label{Local Average Treatment}\scalebox{0.35}
-	{\includegraphics{fig-local-average-treatment.png}}
+	\caption{Local Average Treatment Effect}\label{Local Average Treatment}
+	\scalebox{0.35}{\includegraphics{./material/fig-local-average-treatment.png}}
 \end{figure}
-
-\end{frame}
-
-
-\begin{frame}
-%\subsubsection{Distributional Effects of Treatment}\label{distributional-effects-of-treatment}
-\frametitle{Distributional Effects of Treatment}
-
+\end{frame} 
+ 
+ 
+\begin{frame}  
+\textbf{Distributional Effects of Treatment:}
 \begin{itemize}
-\item
-  Marginal Distribution of Benefits
-\item
-  Joint Distribution of Potential Outcomes
-\item
-  Joint Distribution of Benefits and Surplus
+\item Marginal Distribution of Benefits
+\item Joint Distribution of Potential Outcomes
+\item Joint Distribution of Benefits and Surplus
 \end{itemize}
 \end{frame}
 
 
 \begin{frame}
-
 \begin{figure}[htp]\centering
-	\caption{Distribution of Benefits}\label{Treatment Effects Benefits}\scalebox{0.35}
-	{\includegraphics{fig-treatment-effects-benefits.png}}
+	\caption{Marginal Distribution of Benefits}\label{Treatment Effects Benefits}
+	\scalebox{0.35}{\includegraphics{./material/fig-treatment-effects-benefits.png}}
 \end{figure}
-
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Distributional Effects of Treatment}
-
 \begin{figure}[htp]\centering
-	\caption{Joint Distribution of Potential Outcomes}\label{Treatment Effects Benefits}\scalebox{0.80}
-	{\includegraphics{fig-distribution-potential.png}}
+	\caption{Joint Distribution of Potential Outcomes}\label{Treatment Effects Benefits}
+	\scalebox{0.80}{\includegraphics{./material/fig-distribution-potential.png}}
 \end{figure}
-
 \end{frame}
 
 
 \begin{frame}
-%\frametitle{Distributional Effects of Treatment}
-
 \begin{figure}[htp]\centering
-	\caption{Joint Distribution of Surplus and Benefits}\label{Treatment Effects Benefits}\scalebox{0.80}
-	{\includegraphics{fig-distribution-surplus.png}}
+	\caption{Joint Distribution of Surplus and Benefits}\label{Treatment Effects Benefits}
+	\scalebox{0.80}{\includegraphics{./material/fig-distribution-surplus.png}}
 \end{figure}
-
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Teaching Tool}
-
 \begin{figure}[htp]\centering
-	\includegraphics[width=\textwidth]{fig-online-documentation.png}
-%\caption{Teaching Tool}\label{Teaching Tool}
-%\scalebox{0.18}{\includegraphics{fig-online-documentation.png}}
+	\includegraphics[width=\textwidth]{./material/fig-online-documentation.png}
 \end{figure}
-
 \end{frame}
 
 
-
-    % Add a bibliography block to the postdoc
-
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Add a bibliography block to the postdoc  
+    
 
 %!TEX root = ../main.tex
 \beginbackup
-%\appendix
-%\begin{frame}\begin{center}
-%\LARGE\textbf{Appendix}
-%\end{center}\end{frame}
+\appendix
+\begin{frame}\begin{center}
+\LARGE\textbf{Appendix}
+\end{center}\end{frame}
 
 %------------------------------------------------------------------------------
 %------------------------------------------------------------------------------
@@ -469,10 +338,11 @@ B^{LATE}(x, u_D, u_{D^\prime}) = \frac{1}{u_D - u_{S^\prime}} \int_{u_D}^{u_{S^\
 \nocite{Abbring.2007,Carneiro.2003,Carneiro.2011,Heckman.2001g,Heckman.2008a,Heckman.1997,Heckman.2006d,Heckman.2001d,Heckman.2001e,Heckman.2005e,Heckman.2007e,Heckman.2007f,Roy.1951}
 
 \bibliographystyle{apalike}
-\bibliography{../../submodules/bibliography/literature}
-
+\bibliography{../submodules/bibliography/literature}
+%\bibliography{../../../submodules/bibliography/literature}
 
 \end{frame}
+
 
 \backupend
 \end{document}
