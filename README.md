@@ -27,6 +27,6 @@ I provide a brief overview on the NLSY dataset.
 
 We maintain a collection of presentations on seminal papers in the econometrics of policy evaluation.
 
-### [The rate of return to the HighScope Perry Preschool Program](https://github.com/talks/seminal_papers/Heckman_al_2010/slides.pdf)
+### [The rate of return to the HighScope Perry Preschool Program](https://github.com/policyMetrics/talks/blob/master/seminal_papers/Heckman_al_2010/slides.pdf)
 
 This paper estimates the rate of return to the HighScope Perry Preschool Program, an early intervention program targeted toward disadvantaged African-American youth. The authors try to explicitly address the compromising of the randomization protocol.
