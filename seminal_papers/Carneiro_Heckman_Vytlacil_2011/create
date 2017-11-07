@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+"""This module compiles the material for seminal papers."""
+import subprocess
+import shutil
+import os
+
+if __name__ == '__main__':
+
+    for dirname in ['slides']:
+        os.chdir(dirname)
+        subprocess.check_call('./create', shell=True)
+        shutil.copy('main.pdf', '../' + dirname + '.pdf')
+        os.chdir('../')
