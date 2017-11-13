@@ -12,7 +12,7 @@ I discuss the current literature attempting to estimate returns to education.
 
 ### [Using Childhood Skills to Forcast Lifecycle Outcomes](https://github.com/policyMetrics/talks/blob/master/forcasting_lifecycle_outcomes/slides.pdf) by [cocorbin](https://github.com/cocorbin)
 
-I provide a brief overview of our research respective the forcasting of lifecycle outcomes using of childhood skills. The presentation adresses the following questions: 
+I provide a brief overview of our research respective the forcasting of lifecycle outcomes using childhood skills. The presentation adresses the following questions: 
 * How predicitve are cognitive and non-cognitive skills measured at early childhood, relative to those measured at later ages?
 * What is the best forcasting model based on childhood skill measures for each of adult outcome?
 * How does the predictive power of skills vary across outcome distribution?
