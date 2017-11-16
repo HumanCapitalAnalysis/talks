@@ -35,7 +35,7 @@ I provide a brief overview on the NLSY dataset.
 
 We maintain a collection of presentations on seminal papers in the econometrics of policy evaluation.
 
-### [Estimating marginal returns to education](https://github.com/policyMetrics/course/blob/master/seminal_papers/Carneiro_Heckman_Vytlacil_2011/slides.pdf)
+### [Estimating marginal returns to education](https://github.com/policyMetrics/talks/blob/master/seminal_papers/Carneiro_Heckman_Vytlacil_2011/slides.pdf)
 
 This paper estimates marginal returns to college for individuals induced to enroll in college by different marginal policy changes. The recent instrumental variables literature seeks to estimate this parameter, but in general it does so only under strong assumptions that are tested and found wanting. The authors show how to utilize economic theory and local instrumental variables estimators to estimate the effect of marginal policy changes.  
 
