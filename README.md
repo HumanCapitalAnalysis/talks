@@ -25,6 +25,6 @@ I provide a brief overview of Authorea, the tool we plan to use for the collabor
 
 I provide a brief overview on data analytics using Python.
 
-### [Introduction to the NLSY Dataset](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_nlsy_dataset/lecture.ipynb#/) by [benediktkauf](https://github.com/benediktkauf)
+### [Introduction to the NLSY Dataset](https://github.com/policyMetrics/talks/blob/master/intro_nlsy_dataset/NLSY_intro.pdf) by [benediktkauf](https://github.com/benediktkauf)
 
 I provide a brief overview on the NLSY dataset.
