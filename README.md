@@ -21,9 +21,9 @@ I provide a brief overview of our research respective the forecasting of lifecyc
 
 I provide a brief overview of Authorea, the tool we plan to use for the collaborative writing projects. The slides also include a short introduction to Git/GitHub. For more information about the features and applications of Authorea see: [Authorea Help Center](https://intercom.help/authorea/).
 
-### Introduction to Data Analytics using Python - [Slides](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/slides.pdf#/) and [Jupyter Notebook](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/data_analytics.ipynb#/) by [tobiasraabe](https://github.com/tobiasraabe)
+### Introduction to Data Analytics using Python - [Slides](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/slides.pdf) and [Jupyter Notebook](http://nbviewer.jupyter.org/github/policyMetrics/talks/blob/master/intro_data_analytics/data_analytics.ipynb) by [tobiasraabe](https://github.com/tobiasraabe)
 
-I provide a brief overview on data analytics using Python.
+First, I provide a brief overview on Python and data analytics, supplementary material and state-of-the-art applications in the slides. Second, a short introduction to pandas and its powerful applications is shown in the accompanying Jupyter notebook.
 
 ### [Introduction to the NLSY Dataset](https://github.com/policyMetrics/talks/blob/master/intro_nlsy_dataset/NLSY_intro.pdf) by [benediktkauf](https://github.com/benediktkauf)
 
