@@ -6,7 +6,7 @@ import subprocess
 
 if __name__ == '__main__':
 
-    for task in ['pdflatex']:
+    for task in ['pdflatex', 'pdflatex']:
         subprocess.check_call(task + ' main', shell=True)
 
     os.rename('main.pdf', 'slides.pdf')
