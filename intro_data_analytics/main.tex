@@ -1,0 +1,148 @@
+%!TEX root = ../main.tex
+
+\input{header.tex}
+
+\title{Data Analytics with Python}
+\author{Tobias Raabe}
+\date{}
+\let\otp\titlepage
+
+\begin{document}
+\maketitle
+
+\begin{frame}[c]\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Why Python?} % (fold)
+\label{sec:why_python}
+
+\begin{frame}[c]\frametitle{Why Python?}
+\begin{itemize}
+    \item \textbf{open source} (you are able to review the source code)
+    \item \textbf{easy to learn} (you are able to write your own code)
+    \item \textbf{general-purpose language} (you are able to perform all actions ranging from creating folders to analyzing data)
+    \item \textbf{glue language} (your are able to implement a variety of other programming language into a project like R, C, Julia, etc.)
+    \item \textbf{increasing popularity among the economics and econometrics community}
+    \item \textbf{fast growing}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[c]
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\textwidth, height=0.8\textheight]{material/fig-python-growth}
+    \caption{source: \url{https://stackoverflow.blog/2017/09/06/incredible-growth-python/}}
+    \label{fig:python-growth}
+\end{figure}
+\end{frame}
+
+\begin{frame}[c]
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\textwidth, height=0.8\textheight]{material/fig-pandas-growth}
+    \caption{source: \url{https://stackoverflow.blog/2017/09/14/python-growing-quickly/}}
+    \label{fig:pandas-growth}
+\end{figure}
+\end{frame}
+
+\begin{frame}[c]
+\begin{figure}[tb]
+    \centering
+    \includegraphics[width=0.8\textwidth, height=0.8\textheight]{material/fig-pandas-visitors-by-industry}
+    \caption{source: \url{https://stackoverflow.blog/2017/09/14/python-growing-quickly/}}
+    \label{fig:figure1}
+\end{figure}
+\end{frame}
+% section why_python (end)
+
+\section{Why not R, or Stata} % (fold)
+\label{sec:why_not_r_stata}
+
+\begin{frame}[c]\frametitle{Why not R, Stata}
+\begin{description}
+    \item[R]
+    \begin{itemize}
+        \item major inspiration for most scientific Python packages
+        \item \href{https://www.tidyverse.org/}{Tidyverse} is a collection of incredible powerful data analysis tools
+        \item (my opinion: quirky syntax)
+    \end{itemize}
+    \item[Stata]
+    \begin{itemize}
+        \item proprietary and closed code base
+        \item useful for quick analysis
+        \item (my opinion: quirky syntax, hard to manage bigger projects, how to ensure reproducibility)
+    \end{itemize}
+\end{description}
+\end{frame}
+% section why_not_r_stata_matlab_julia (end)
+
+\section{Scientific Computing Tools for Python} % (fold)
+\label{sec:scientific_computing_tools_for_python}
+
+\begin{frame}[c]\frametitle{Scientific Computing Tools for Python}
+Packages\footnote{\url{https://www.scipy.org/about.html}}
+
+\begin{description}
+    \item[NumPy] fundamental package for numerical operations
+    \item[SciPy] collection of numerical algorithms, statistics, optimizations, etc.
+    \item[Matplotlib] plotting library
+    \item[pandas] provides high-performance and easy-to-use data structures
+    \item[scikit-learn] collection of algorithms and tools for machine learning
+    \item[Jupyter] powerful IDE (integrated development environment) which combines python and markdown
+    \item[Anaconda] an installer for a preconfigured python environment containing the scientific stack and many other useful libraries
+\end{description}
+\end{frame}
+% section scientific_computing_tools_for_python (end)
+
+
+\section{Setup} % (fold)
+\label{sec:setup}
+
+\begin{frame}[c]\frametitle{Setup}
+\begin{enumerate}
+    \item download the files required for the tutorial from \href{https://www.dropbox.com/sh/0onu61t2olg2gwz/AAAtqiANuKODdBDdPlGTYtXja?dl=0}{here}, unzip and place them into a folder in your user directory.
+    \item download the installer for Python 3.6 from \url{https://www.anaconda.com/download/} and run it
+    \begin{itemize}
+        \item \textit{If you are asked whether Anaconda and its paths should be added to your system's PATH or not, choose the option to add them}
+    \end{itemize}
+    \item start the Jupyter notebook in one of two ways
+    \begin{enumerate}
+        \item use terminal, shell, cmd, powershell to navigate to your project's folder and enter \texttt{jupyter notebook}
+        \item start Jupyter via the Anaconda Navigator (installed with Anaconda)
+    \end{enumerate}
+    \item make sure that you can navigate to the tutorial folder inside the opened tab in your browser
+    \item (optional) Start a new notebook by clicking on \texttt{New} in the top right corner and select Python 3
+\end{enumerate}
+\end{frame}
+% section setup (end)
+
+\section{Useful links} % (fold)
+\label{sec:useful_links}
+
+\begin{frame}[c]\frametitle{Tutorials}
+\begin{itemize}
+    \item \href{https://learnpythonthehardway.org/}{Zed A. Shaw - Learn Python the Hard Way - General Python Tutorial}
+    \item \href{https://blog.patricktriest.com/police-data-python/}{Patrick Triest - Exploring US Policing Data using Python}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[c]\frametitle{Documentation}
+\begin{itemize}
+    \item \href{https://stackoverflow.com/}{stackoverflow - World's largest developer community}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[c]\frametitle{Others}
+\begin{itemize}
+    \item \href{https://www.anaconda.com/download/}{Anaconda Distribution} delivers Python with a pre-compiled stack of scientific packages
+    \item \href{https://jakevdp.github.io/PythonDataScienceHandbook/}{Jake VanderPlas - Python Data Science Handbook} is inspiration for this tutorial
+    \item \href{https://www.amazon.de/Python-Data-Analysis-Wrangling-IPython/dp/1491957662/}{Wes McKinney - Python for Data Analysis} is book from the developer of pandas
+    \item \href{https://www.pythonweekly.com/}{Python Weekly} is a weekly newsletter which covers all aspects of Python but also includes links to tutorials, etc.
+    \item \href{https://www.kaggle.com/}{Kaggle} is a data science and machine learning community with tutorials, competitions, etc.
+    \item \href{https://github.com/hmgaudecker/econ-project-templates}{Templates for Reproducible Research Projects in Economics} by Hans-Martin von Gaudecker
+    \item \href{https://drivendata.github.io/cookiecutter-data-science/}{Cookiecutter - Data Science} is a template for the structure of a research project
+\end{itemize}
+\end{frame}
+% section useful_links (end)
+\end{document}
