@@ -19,7 +19,7 @@ I provide a brief overview on our research respective the forecasting of lifecyc
 
 ### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_github_authorea/lecture.ipynb#/) by [sebecker](https://github.com/sebecker)
 
-I provide a brief overview on Authorea, the toll that the students are supposed to user for the collaborative writing projects. The slides also include a short introduction to Git/GitHub. For more information about the features and applications of Authorea see: [Authorea Help Center](https://intercom.help/authorea/).
+I provide a brief overview on Authorea, the tool that the students are supposed to use for their collaborative writing projects. The slides also include a short introduction to Git/GitHub. For more information about the features and applications of Authorea see: [Authorea Help Center](https://intercom.help/authorea/).
 
 ### Introduction to Data Analytics using Python - [Slides](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/slides.pdf) and [Jupyter Notebook](http://nbviewer.jupyter.org/github/policyMetrics/talks/blob/master/intro_data_analytics/data_analytics.ipynb) by [tobiasraabe](https://github.com/tobiasraabe)
 
