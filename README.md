@@ -1,6 +1,6 @@
 # Talks
 
-This repository contains all material for the talks.
+This public repository contains all material for the talks.
 
 ### [Overview on the Generalized Roy Model](https://github.com/policyMetrics/talks/blob/master/overview_generalized_roy/slides.pdf) by [peisenha](https://github.com/peisenha)
 
