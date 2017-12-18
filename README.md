@@ -12,9 +12,9 @@ I discuss the current literature attempting to estimate returns to education.
 
 ### [Using Childhood Skills to Forecast Lifecycle Outcomes](https://github.com/policyMetrics/talks/blob/master/forecasting_lifecycle_outcomes/slides.pdf) by [cocorbin](https://github.com/cocorbin)
 
-I provide a brief overview on our research respective the forecasting of lifecycle outcomes using childhood skills. The presentation adresses the following questions:
-* How predicitve are cognitive and non-cognitive skills measured at early childhood, relative to those measured at later ages?
-* What is the best forecasting model based on childhood skill measures for each of adult outcome?
+I provide a brief overview on our research respective the forecasting of life-cycle outcomes using childhood skills. The presentation addresses the following questions:
+* How predictive are cognitive and non-cognitive skills measured at early childhood, relative to those measured at later ages?
+* What is the best for recasting model based on childhood skill measures for each of adult outcome?
 * How does the predictive power of skills vary across outcome distribution?
 
 ### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_github_authorea/lecture.ipynb#/) by [sebecker](https://github.com/sebecker)
