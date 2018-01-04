@@ -7,7 +7,7 @@ import os
 if __name__ == '__main__':
 
     os.chdir('slides')
-    subprocess.check_call('./create', shell=True)
+    subprocess.check_call('./create.py', shell=True)
     os.chdir('../')
 
     shutil.copy('slides/main.pdf', 'slides.pdf')

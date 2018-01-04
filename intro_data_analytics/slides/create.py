@@ -1,13 +1,10 @@
 #!/usr/bin/env python
 """This module compiles the notes with the figures."""
-
-import os
 import subprocess
+import shutil
+import os
 
 if __name__ == '__main__':
 
-    for task in ['pdflatex', 'pdflatex']:
+    for task in ['pdflatex']:
         subprocess.check_call(task + ' main', shell=True)
-
-    os.rename('main.pdf', 'slides.pdf')
-    subprocess.check_call('git clean -d -f -e *.pdf', shell=True)
