@@ -6,10 +6,6 @@ This public repository contains all material for the talks.
 
 I provide a brief overview on the conceptual framework provided by the generalized Roy model. We discuss alternative sources of heterogeneity, numerous parameters of interest, and explore the marginal treatment effect in detail.
 
-### [Returns to Education](https://github.com/policyMetrics/talks/blob/master/returns_to_education/slides.pdf) by [peisenha](https://github.com/peisenha)
-
-I discuss the current literature attempting to estimate returns to education.
-
 ### [Using Childhood Skills to Forecast Lifecycle Outcomes](https://github.com/policyMetrics/talks/blob/master/forecasting_lifecycle_outcomes/slides.pdf) by [cocorbin](https://github.com/cocorbin)
 
 I provide a brief overview on our research respective the forecasting of life-cycle outcomes using childhood skills. The presentation addresses the following questions:
