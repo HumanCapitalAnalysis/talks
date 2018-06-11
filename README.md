@@ -2,10 +2,6 @@
 
 This public repository contains all material for the talks.
 
-### [Overview on the Generalized Roy Model](https://github.com/policyMetrics/talks/blob/master/overview_generalized_roy/slides.pdf) by [peisenha](https://github.com/peisenha)
-
-I provide a brief overview on the conceptual framework provided by the generalized Roy model. We discuss alternative sources of heterogeneity, numerous parameters of interest, and explore the marginal treatment effect in detail.
-
 ### [Using Childhood Skills to Forecast Lifecycle Outcomes](https://github.com/policyMetrics/talks/blob/master/forecasting_lifecycle_outcomes/slides.pdf) by [cocorbin](https://github.com/cocorbin)
 
 I provide a brief overview on our research respective the forecasting of life-cycle outcomes using childhood skills. The presentation addresses the following questions: How predictive are cognitive and non-cognitive skills measured at early childhood, relative to those measured at later ages? What is the best forecasting model based on childhood skill measures for each of adult outcome? How does the predictive power of skills vary across outcome distribution?
