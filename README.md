@@ -42,6 +42,11 @@ This paper formulates and estimates multistage production functions for children
 
 We share some basic research skills that turned out to be useful.
 
-### [Reading scientific papers](https://github.com/policyMetrics/course/blob/master/distribution/Cunha_Heckman_Schennach_2010.pdf)
+### [Reading scientific papers](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/research_skills/01_reading_scientific_papers.pdf)
 
 We disuss some best practices on how to read scientific papers.
+
+### [Mathematical modeling](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/research_skills/02_mathematical_modeling.pdf)
+
+We discuss the basic ideas of mathematical modeling with special reference to economic models.
+
