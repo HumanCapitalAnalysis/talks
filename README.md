@@ -26,7 +26,7 @@ I provide a brief overview on the NLSY dataset.
 
 We discuss some of the seminal papers in the literature.
 
-### [Estimating marginal returns to education](https://github.com/policyMetrics/course/blob/master/distribution/Carneiro_Heckman_Vytlacil_2011.pdf)
+### [Estimating marginal returns to education](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/seminal_papers/01_Carneiro_al_2011.pdf)
 
 This paper estimates marginal returns to college for individuals induced to enroll in college by different marginal policy changes. The recent instrumental variables literature seeks to estimate this parameter, but in general it does so only under strong assumptions that are tested and found wanting. The authors show how to utilize economic theory and local instrumental variables estimators to estimate the effect of marginal policy changes.  
 
@@ -49,4 +49,3 @@ We disuss some best practices on how to read scientific papers.
 ### [Mathematical modeling](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/research_skills/02_mathematical_modeling.pdf)
 
 We discuss the basic ideas of mathematical modeling with special reference to economic models.
-
