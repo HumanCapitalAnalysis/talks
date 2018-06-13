@@ -13,7 +13,7 @@ def compile_single(is_update):
         subprocess.check_call(task + ' main', shell=True)
 
     if is_update:
-        shutil.copy('main.pdf', '../distribution/' + os.getcwd().split('/')[-1] + '.pdf')
+        shutil.copy('main.pdf', '../../distribution/' + os.getcwd().split('/')[-1] + '.pdf')
 
 
 if __name__ == '__main__':
