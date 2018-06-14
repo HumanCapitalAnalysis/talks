@@ -6,19 +6,19 @@ This public repository contains material for several talks.
 
 We were lucky to host some guest presentations.
 
-### [Using Childhood Skills to Forecast Lifecycle Outcomes](https://github.com/policyMetrics/talks/blob/master/forecasting_lifecycle_outcomes/slides.pdf) by [cocorbin](https://github.com/cocorbin)
+### [Using Childhood Skills to Forecast Lifecycle Outcomes](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/guest_presentations/01_forecasting_lifecycle_outcomes.pdf) by [cocorbin](https://github.com/cocorbin)
 
 I provide a brief overview on our research respective the forecasting of life-cycle outcomes using childhood skills. The presentation addresses the following questions: How predictive are cognitive and non-cognitive skills measured at early childhood, relative to those measured at later ages? What is the best forecasting model based on childhood skill measures for each of adult outcome? How does the predictive power of skills vary across outcome distribution?
 
-### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_github_authorea/lecture.ipynb#/) by [sebecker](https://github.com/sebecker)
+### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/format/slides/github/HumanCapitalEconomics/talks/blob/master/distribution/guest_presentations/02_intro_github_authorea.ipynb#/) by [sebecker](https://github.com/sebecker)
 
 I provide a brief overview on Authorea, the tool that the students are supposed to use for their collaborative writing projects. The slides also include a short introduction to Git/GitHub. For more information about the features and applications of Authorea see: [Authorea Help Center](https://intercom.help/authorea/).
 
-### Introduction to Data Analytics using Python - [Slides](http://nbviewer.jupyter.org/format/slides/github/policyMetrics/talks/blob/master/intro_data_analytics/slides.pdf) and [Jupyter Notebook](http://nbviewer.jupyter.org/github/policyMetrics/talks/blob/master/intro_data_analytics/material/data_analytics.ipynb) by [tobiasraabe](https://github.com/tobiasraabe)
+### Introduction to Data Analytics using Python - [Slides](http://nbviewer.jupyter.org/format/slides/github/HumanCapitalEconomics/talks/blob/master/distribution/guest_presentations/03_intro_data_analytics.pdf) and [Jupyter Notebook](http://nbviewer.jupyter.org/github/HumanCapitalEconomics/talks/blob/master/distribution/guest_presentations/03_intro_data_analytics.ipynb#/) by [tobiasraabe](https://github.com/tobiasraabe)
 
 First, I provide a brief overview on Python and data analytics, supplementary material and state-of-the-art applications in the slides. Second, a short introduction to pandas and its powerful applications is shown in the accompanying Jupyter notebook.
 
-### [Introduction to the NLSY Dataset](https://github.com/policyMetrics/talks/blob/master/intro_nlsy_dataset/slides.pdf) by [benediktkauf](https://github.com/benediktkauf)
+### [Introduction to the NLSY Dataset](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/guest_presentations/04_intro_nlsy_dataset.pdf) by [benediktkauf](https://github.com/benediktkauf)
 
 I provide a brief overview on the NLSY dataset.
 
