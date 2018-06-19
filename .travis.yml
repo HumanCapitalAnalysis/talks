@@ -1,0 +1,16 @@
+language: python
+python:
+    - 3.5
+    - 3.6
+
+bundler_args: --retry 3
+
+before_install:
+    - sudo apt-get update
+    - sudo apt-get install texlive texlive-science texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra
+    - sudo apt-get install pdftk
+    - pip install matplotlib
+
+script:
+    - texhash
+    - travis_wait ./create_project
