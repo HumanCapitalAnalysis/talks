@@ -38,6 +38,10 @@ This paper formulates and estimates multistage production functions for children
 
 This paper estimates the rate of return to the HighScope Perry Preschool Program, an early intervention program targeted toward disadvantaged African-American youth. The authors try to explicitly address the compromising of the randomization protocol.
 
+### [The career decisions of young men](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/seminal_papers/04_Keane_al_1997.pdf)
+
+This paper provides structural estimates of a dynamic model of schooling, work, and occupational choice decisions based on 11 years of observations on a sample of young men from the 1979 youth cohort of the National Longitudinal Surveys of Labor Market Experience (NLSY). The structural estimation framework that we adopt fully imposes the restrictions of the theory and permits an investigation of whether such a theoretically restricted model can succeed in quantitatively fitting the observed data patterns. We find that a suitably extended human capital investment model can in fact do an excellent job of fitting observed data on school attendance, work, occupational choices, and wages in the NLSY data on young men and also produces reasonable forecasts of future work decisions and wage patterns.
+
 ## Research skills
 
 We share some basic research skills that turned out to be useful.
@@ -49,3 +53,5 @@ We disuss some best practices on how to read scientific papers.
 ### [Mathematical modeling](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/research_skills/02_mathematical_modeling.pdf)
 
 We discuss the basic ideas of mathematical modeling with special reference to economic models.
+
+[![Build Status](https://travis-ci.org/HumanCapitalEconomics/talks.svg?branch=master)](https://travis-ci.org/HumanCapitalEconomics/talks)
