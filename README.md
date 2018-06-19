@@ -42,6 +42,8 @@ This paper estimates the rate of return to the HighScope Perry Preschool Program
 
 This paper provides structural estimates of a dynamic model of schooling, work, and occupational choice decisions based on 11 years of observations on a sample of young men from the 1979 youth cohort of the National Longitudinal Surveys of Labor Market Experience (NLSY). The structural estimation framework that we adopt fully imposes the restrictions of the theory and permits an investigation of whether such a theoretically restricted model can succeed in quantitatively fitting the observed data patterns. We find that a suitably extended human capital investment model can in fact do an excellent job of fitting observed data on school attendance, work, occupational choices, and wages in the NLSY data on young men and also produces reasonable forecasts of future work decisions and wage patterns.
 
+* Keane, M. P., & Wolpin, K. I. (1997). [The career decisions of young men.](https://www.journals.uchicago.edu/doi/abs/10.1086/262080) *Journal of Political Economy, 105*(3), 473–522.
+
 ## Research skills
 
 We share some basic research skills that turned out to be useful.
