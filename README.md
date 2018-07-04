@@ -30,13 +30,19 @@ We discuss some of the seminal papers in the literature.
 
 This paper estimates marginal returns to college for individuals induced to enroll in college by different marginal policy changes. The recent instrumental variables literature seeks to estimate this parameter, but in general it does so only under strong assumptions that are tested and found wanting. The authors show how to utilize economic theory and local instrumental variables estimators to estimate the effect of marginal policy changes.  
 
+* Carneiro, P., Heckman, J. J., & Vytlacil, E. J. (2011). [Estimating marginal returns to education.](https://www.aeaweb.org/articles?id=10.1257/aer.101.6.2754) *American Economic Review, 101*(6), 2754–81.
+
 ### [Estimating the technology of cognitive and noncognitive skill formation](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/seminal_papers/02_Cunha_al_2010.pdf)
 
 This paper formulates and estimates multistage production functions for children's cognitive and noncognitive skills.  Using the estimated technology, the authors determine optimal targeting of interventions to children with different parental and personal birth endowments. Substitutability decreases in later stages of the life cycle in the production of cognitive skills. It is roughly constant across stages of the life cycle in the production of noncognitive skills.
 
+* Cunha, F., Heckman, J. J., & Schennach, S. M. (2010). [Estimating the technology of cognitive and noncognitive skill formation.](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA6551) *Econometrica, 78*(3), 883–931.
+
 ### [The rate of return to the HighScope Perry Preschool Program](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/seminal_papers/03_Heckman_al_2010.pdf)
 
 This paper estimates the rate of return to the HighScope Perry Preschool Program, an early intervention program targeted toward disadvantaged African-American youth. The authors try to explicitly address the compromising of the randomization protocol.
+
+* Heckman, J. J., Moon, S. H., Pinto, R., Savelyev, P. A., & Yavitz, A. (2010). [The rate of return to the HighScope Perry Preschool Program.](https://www.sciencedirect.com/science/article/pii/S0047272709001418) *Journal of Public Economics, 94*(1–2), 114–128.
 
 ### [The career decisions of young men](https://github.com/HumanCapitalEconomics/talks/blob/master/distribution/seminal_papers/04_Keane_al_1997.pdf)
 
