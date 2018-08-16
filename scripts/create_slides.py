@@ -13,16 +13,31 @@ def compile_single(is_update):
         subprocess.check_call(task + ' main', shell=True)
 
     if is_update:
-        shutil.copy('main.pdf', '../../distribution/' + os.getcwd().split('/')[-1] + '.pdf')
+        shutil.copy('main.pdf', '../../distribution/' + folder + "/" + os.getcwd().split('/')[-1] + '.pdf')
 
 
 if __name__ == '__main__':
 
-    parser = argparse.ArgumentParser(' Create slides for lecture')
+    for folder in ['seminal_papers', 'research_skills']:
 
-    parser.add_argument('--update', action='store_true', dest='update',
-                        help='update public slides')
+        if folder=='research_skills':
+           os.chdir('../' + folder)
 
-    is_update = parser.parse_args().update
+        parser = argparse.ArgumentParser(' Create slides for lecture')
 
-    compile_single(is_update)
+        parser.add_argument('--update', action='store_true', dest='update',
+	                    help='update public slides')
+
+        is_complete = folder == os.getcwd().split('/')[-1]
+        is_update = parser.parse_args().update
+
+        if is_complete:
+	        for dirname in glob.glob("0*"):
+	            os.chdir(dirname)
+	            compile_single(is_update)
+	            os.chdir('../')
+
+
+        else:
+
+	        compile_single(is_update)
