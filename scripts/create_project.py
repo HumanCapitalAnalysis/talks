@@ -4,10 +4,6 @@ import subprocess
 import os
 
 # We build all lectures and update the distribution.
-os.chdir('../seminal_papers')
+os.chdir('seminal_papers')
 subprocess.check_call(['./create_slides', '--update'])
 os.chdir('../')
-
-
-
-
