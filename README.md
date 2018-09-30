@@ -62,4 +62,4 @@ We disuss some best practices on how to read scientific papers.
 
 We discuss the basic ideas of mathematical modeling with special reference to economic models.
 
-[![Build Status](https://travis-ci.org/HumanCapitalEconomics/talks.svg?branch=master)](https://travis-ci.org/HumanCapitalEconomics/talks)
+[![Build Status](https://travis-ci.org/HumanCapitalAnalysis/talks.svg?branch=master)](https://travis-ci.org/HumanCapitalAnalysis/talks)
