@@ -22,6 +22,14 @@ First, I provide a brief overview on Python and data analytics, supplementary ma
 
 I provide a brief overview on the NLSY dataset.
 
+## Overviews
+
+We provide an overview on selected topics.
+
+### [Introduction to the generalized Roy model](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/overviews/01_intro_generalized_roy.pdf)
+
+We review the basic setup of the generalized Roy model and discuss the different parameters of interest.
+
 ## Seminal papers
 
 We discuss some of the seminal papers in the literature.

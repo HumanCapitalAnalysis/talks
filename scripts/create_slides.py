@@ -24,7 +24,7 @@ if __name__ == '__main__':
     parser.add_argument('--update', action='store_true', dest='update',
 	                    help='update public slides')
 
-    is_complete = os.getcwd().split('/')[-1] in ['research_skills', 'seminal_papers']
+    is_complete = os.getcwd().split('/')[-1] in ['research_skills', 'seminal_papers', 'overviews']
     is_update = parser.parse_args().update
 
     if is_complete:
