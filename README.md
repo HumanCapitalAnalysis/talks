@@ -30,6 +30,13 @@ We provide an overview on selected topics.
 
 We review the basic setup of the generalized Roy model and discuss the different parameters of interest.
 
+### [Life cycle wage growth](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/overviews/02_life_cycle_wages.pdf)
+
+We discuss the handbook chapter by Rubinstein and Weiss on post schooling wage growth.
+
+> The survey presents basic facts on wage growth and summarizes the main ideas on the possible sources of this growth. We document that wage growth happens mainly early in the life cycle and is then associated with increasing labor force participation and high job mobility. Wage growth during the first decade in the labor market, is about 50% for high school graduates and about 80% for those with college or more. This growth is comparable in size to the accumulated contribution of schooling for these two groups. We describe in detail models of wage growth that can explain these results, including investment in human capital, search and learning. We also discuss the roles of contracts
+in sharing the risks associated with learning about ability and varying market conditions.Evidence supporting investment is the U shaped life cycle profile for the variance of wages. However, heterogeneity matters and individuals with relatively high life time earnings have both a higher mean and a higher growth. Evidence supporting search is the high wage gains obtained from changing employers early in the career. Evidence for learning are the initially rising hazard of quitting and the rising rewards for AFQT scores that are not observed by the market.
+
 ## Seminal papers
 
 We discuss some of the seminal papers in the literature.
