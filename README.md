@@ -79,4 +79,12 @@ We disuss some best practices on how to read scientific papers.
 
 We discuss the basic ideas of mathematical modeling with special reference to economic models.
 
+## Sandbox
+
+We share some drafts for material that we hope to develop into full lectures.
+
+### [Causal model]()
+
+We provide a brief intro to the world of causal modeling.
+
 [![Build Status](https://travis-ci.org/HumanCapitalAnalysis/talks.svg?branch=master)](https://travis-ci.org/HumanCapitalAnalysis/talks)
