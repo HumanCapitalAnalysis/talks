@@ -83,7 +83,7 @@ We discuss the basic ideas of mathematical modeling with special reference to ec
 
 We share some drafts for material that we hope to develop into full lectures.
 
-### Causal models [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/HumanCapitalAnalysis/talks/blob/master/sandbox/01_causal_models/lecture.ipynb)
+### Causal models [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/HumanCapitalAnalysis/talks/master?filepath=sandbox%2F01_causal_models%2Flecture.ipynb)
 
 We provide a brief intro to the world of causal modeling.
 
