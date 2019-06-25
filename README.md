@@ -39,6 +39,10 @@ in sharing the risks associated with learning about ability and varying market c
 
 * Rubinstein, Y., & Weiss, Y. (2006). [Post schooling wage growth: Investment, search and learning](https://www.sciencedirect.com/science/article/pii/S1574069206010014). In E. Hanushek, and F. Welch, editors, *Handbook of the Economics of Education*, volume 1, pages 1-67, Elsevier Science, Amsterdam, Netherlands.
 
+### [Tyranny of metrics](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/overviews/03_tyranny_of_metrics.pdf)
+
+... to be added
+
 ## Seminal papers
 
 We discuss some of the seminal papers in the literature.
