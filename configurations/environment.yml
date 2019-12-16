@@ -1,0 +1,29 @@
+name: teaching-talks
+
+channels:
+- conda
+- conda-forge
+- r
+
+dependencies:
+- numpy
+- libgfortran
+- pandas
+- pandas-datareader
+- flake8
+- pytest
+- scipy=1.2.1
+- jupyterlab
+- matplotlib
+- seaborn
+- jupyter
+- jupyter_contrib_nbextensions
+- jupyter_nbextensions_configurator
+- pip
+- pygraphviz
+- rise
+- r-essentials
+- rpy2
+- simplegeneric
+- pip:
+        - linearmodels

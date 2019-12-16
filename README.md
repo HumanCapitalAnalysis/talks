@@ -2,6 +2,12 @@
 
 This public repository contains material for several talks.
 
+## Selected topics
+
+### [Simulation of choice probabilities]
+
+We discuss the simulation of choice probabilities in the context of a Probit model. We explore the crude accept - reject simulator and its smoothed improvements. 
+
 ## Guest presentations
 
 We were lucky to host some guest presentations.

@@ -1,0 +1,97 @@
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame} I heavily draw on the material presented in:
+
+\begin{itemize}
+\item \bibentry{Train.2009}
+\end{itemize}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Probit setup}\vspace{0.3cm}
+
+\begin{align*}
+U_{nj} = V_{nj} + \epsilon_{nj} \forall j \\
+\epsilon^\prime_{n} = (\epsilon_{n1}, \hdots, \epsilon_{nJ})
+\end{align*}
+The (most) approaches and issues we discus have general applicability.
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Choice probability}\vspace{0.3cm}
+
+\begin{align*}
+  P_{ni} & = P(V_{ni} + \epsilon_{ni} > V_{nj} + \epsilon_{nj} \forall j \neq i) \\
+         & = \int \Ind (V_{ni} + \epsilon_{ni} > V_{nj} + \epsilon_{nj} \forall j \neq i) \phi(\epsilon_n)d\epsilon_n
+\end{align*}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\vspace{0.3cm}
+
+The choice probabilities do not have a closed form expression and must be approximated numerically
+
+\begin{itemize}\setlength\itemsep{1em}
+  \item quadrature
+  \item Monte Carlo methods
+  \begin{itemize}\setlength\itemsep{1em}
+    \item crude accept-reject simulator
+    \item smoothed accept-reject simulator
+  \end{itemize}
+\end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Crude accept-reject simulator}\vspace{0.3cm}
+\begin{enumerate}\setlength\itemsep{1em}
+  \item Draw $J$ values from the multivariate normal distribution to sample $\epsilon^r_{n}$.
+  \item Calculate the simulated utilities $U^r_{nj}$ for all alternatives.
+  \item Determine alternative with the highest utility and calculate $I^r = 1$ if $U^r_{nj}$ is maximum.
+\end{enumerate}
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Crude accept-reject simulator}\vspace{0.3cm}
+\begin{enumerate}\setlength\itemsep{1em}
+  \item Repeat the steps above $R$ times
+\end{enumerate}
+
+The simulated probability is the number of accepts divided by the number of repetitions: $\hat{P}_{ni} = \frac{1}{R} \sum^R_{r=1} I^r$.
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Issues}\vspace{0.3cm}
+\begin{itemize}\setlength\itemsep{1em}
+  \item simulation of zero probability
+  \item simulated probability is step function\\
+\end{itemize}
+
+We will explore issues in estimation using a Python notebook: \url{http://bit.ly/2WGjWNI}.
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Smooth accept-reject simulator}\vspace{0.3cm}
+
+The smoothed AR simulator mitigates these difficulties with is to replace the 1 - 0 AR indicator with a smooth, strictly positive function.
+
+We simply add an addition step (4):
+
+\begin{align*}
+  S^r = \frac{\exp^{\tfrac{U^r_{ni}}{\lambda}}}{\sum_J\exp^{\tfrac{U^r_{nj}}{\lambda}}}
+\end{align*}
+
+The simulated probability is the number of accepts divided by the number of repetitions: $\hat{P}_{ni} = \frac{1}{R} \sum^R_{r=1} S^r$.
+
+\end{frame}
+
+
+\begin{frame}
+
+We will explore issues in estimation using a Python notebook: \url{http://bit.ly/2WGjWNI}.
+
+\end{frame}
