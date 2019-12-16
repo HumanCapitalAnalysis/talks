@@ -17,8 +17,6 @@ dependencies:
 - matplotlib
 - seaborn
 - jupyter
-- jupyter_contrib_nbextensions
-- jupyter_nbextensions_configurator
 - pip
 - pygraphviz
 - rise

@@ -4,9 +4,16 @@ This public repository contains material for several talks.
 
 ## Selected topics
 
-### [Simulation of choice probabilities]
+### [Simulation of choice probabilities](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/01-simulation-choice-probabilities/slides.pdf)
 
-We discuss the simulation of choice probabilities in the context of a Probit model. We explore the crude accept - reject simulator and its smoothed improvements. 
+We discuss the simulation of choice probabilities in the context of a Probit model. We visit the crude accept - reject simulator and its smoothed extension.
+
+<a href="https://nbviewer.jupyter.org/github/HumanCapitalAnalysis/talks/blob/master/selected-topics/01-simulation-choice-probabilities/notebook.ipynb"
+   target="_parent">
+   <img align="center"
+  src="https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.png"
+      width="109" height="20">
+</a>
 
 ## Guest presentations
 
