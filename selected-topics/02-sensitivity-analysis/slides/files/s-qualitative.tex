@@ -1,0 +1,47 @@
+% !TEX root = ../main.tex
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+		\LARGE\textbf{Qualitative}
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame} Morris method for independent and dependent factors.
+
+\begin{itemize}\setlength\itemsep{1em}
+  \item \bibentry{Morris.1991}
+  \item \bibentry{Ge.2017}
+\end{itemize}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}
+
+		\begin{itemize}
+			\item  The approach segments the model input ranges $[x^-_i, x^+_i]$ in $l$ levels. Given $l$ levels with $m$ inputs, there are $l^n$ points in the grid from which a subset of $r$ points is drawn at random. For each of the $r$, the model is evaluated performing a series of OAT sensitivities.
+		\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\begin{align*}
+	  ee_i = \frac{f(x_1, \hdots, x_{i - 1}, x_i + \Delta, x_{i + 1}, \hdots, x_n) - f(\textbf{x})}{\Delta}
+	\end{align*}
+\end{frame}
+
+
+\begin{frame}
+	\begin{align*}
+	ee^{\,ind}_i & = \frac{f(\bar{x_i}, \textbf{x}_{\sim i})- f(x_i, \textbf{x}_{\sim i})}{\Delta} \\
+	ee^{\,dep}_i & = \frac{f(\bar{x_i}, \bar{\textbf{x}}_{\sim i})- f(x_i, \textbf{x}_{\sim i})}{\Delta}
+	\end{align*}
+\end{frame}
+
+\begin{frame}
+	\begin{align*}
+	  \mu^j_i    & = \frac{1}{N}\sum_{r = 1}^n |\, ee^j_{ir}\,| \\
+	  \sigma^j_i & = \frac{1}{N - 1}\sum_{r = 1}^n (ee^j_{ir} - \mu_i)^2
+	\end{align*}
+
+\end{frame}

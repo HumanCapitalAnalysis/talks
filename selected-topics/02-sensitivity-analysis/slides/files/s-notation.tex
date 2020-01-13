@@ -1,0 +1,28 @@
+% !TEX root = ../main.tex
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+		\LARGE\textbf{Notation}
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}
+The model input vector $\vec{X} = (X_1, \hdots, X_N) \in \mathbb{R}^d$. The quantity of interest $y$ of the model $f(\cdot)$:
+%
+\begin{align*}
+ Y = f(\vec{X})
+\end{align*}
+%
+Following the literature, all parameters $x_i$ are scaled to take on values in the interval $[0, 1]$, and the region of interest $\Omega$ is the $k$- dimensional unit hypercube.
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}
+	\begin{itemize}\setlength\itemsep{1em}
+		\item We collect all parameter in $\vec{x} = [x_1, \hdots, x_n]$. $x_i$ denotes one
+	\item particular value for input parameter $i$ and $\textbf{x}_{\sim i} =  [x_1, \hdots, x_{i -1}, x_{i + 1}, \hdots, x_n]$ as the complementary set of inputs.
+		\item We use the notation $x_i$ and $\bar{x}_{i}$ to distinguish a random vector $x_i$ generated from a joint probability density function $p(x_i, x_{\sim i})$ and a random vector $\bar{x}_i$ generated from a conditional probability distribution $p(\bar{x}_i, x_{\sim i} \mid x_{\sim i})$.
+	\end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------

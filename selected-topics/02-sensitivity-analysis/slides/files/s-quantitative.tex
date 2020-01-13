@@ -1,0 +1,42 @@
+% !TEX root = ../main.tex
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+		\LARGE\textbf{Quantitative}
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}
+	\begin{align}\label{Variance decomposition}
+	V[Y] = V_{X_i}[E_{X_{\sim i}}[Y\mid X_i]] + E_{X_i}[V_{\vec{X}_{\sim i}}[Y\mid X_i]]
+	\end{align}
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Main effect}\vspace{0.3cm}
+
+\begin{itemize}\setlength\itemsep{1em}
+\item We rank all based on the smallest conditional variance $V[Y \mid X_i = x_i]$ evaluated over all possible vales $x_i$ of $X_i$. Following Equation (\ref{Variance decomposition}), this is equivalent to ranking factors by the largest
+$V_{X_i}[E_{\vec{X}_{\sim i}}[Y\mid X_i]]$ and so the main effect is defined as:
+\end{itemize}
+
+\begin{align*}
+S^M_i & = \frac{V_{X_i}[E_{\vec{X}_{\sim i}}[Y\mid X_i]]}{V[Y]}
+\end{align*}
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Total effect}\vspace{0.3cm}
+
+\begin{itemize}
+\item We want to identify the factors that we can fix at their value without significantly reducing the output variance. 
+\end{itemize}
+
+\begin{align*}
+S^T_i & = \frac{E_{\vec{X} \sim i}[V_{X_i}[Y \mid \vec{X}_{\sim i}]]}{V[Y]} = 1 - S^M_{\sim i}
+\end{align*}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------

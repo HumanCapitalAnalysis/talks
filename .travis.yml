@@ -13,4 +13,5 @@ before_install:
 
 script:
     - texhash
-    - travis_wait ./create_project
+    - source .envrc
+    - travis_wait create-project

@@ -15,25 +15,9 @@ We discuss the simulation of choice probabilities in the context of a Probit mod
       width="109" height="20">
 </a>
 
-## Guest presentations
+### [Sensitivity analysis](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/02-Sensitivity-analysis/slides.pdf)
 
-We were lucky to host some guest presentations.
-
-### [Using Childhood Skills to Forecast Lifecycle Outcomes](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/guest_presentations/01_forecasting_lifecycle_outcomes.pdf) by [cocorbin](https://github.com/cocorbin)
-
-I provide a brief overview on our research respective the forecasting of life-cycle outcomes using childhood skills. The presentation addresses the following questions: How predictive are cognitive and non-cognitive skills measured at early childhood, relative to those measured at later ages? What is the best forecasting model based on childhood skill measures for each of adult outcome? How does the predictive power of skills vary across outcome distribution?
-
-### [Introduction to GitHub and Authorea](http://nbviewer.jupyter.org/github/HumanCapitalAnalysis/talks/blob/master/distribution/guest_presentations/02_intro_github_authorea.ipynb) by [sebecker](https://github.com/sebecker)
-
-I provide a brief overview on Authorea, the tool that the students are supposed to use for their collaborative writing projects. The slides also include a short introduction to Git/GitHub. For more information about the features and applications of Authorea see: [Authorea Help Center](https://intercom.help/authorea/).
-
-### Introduction to Data Analytics using Python - [Slides](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/guest_presentations/03_intro_data_analytics.pdf) and [Jupyter Notebook](http://nbviewer.jupyter.org/github/HumanCapitalAnalysis/talks/blob/master/distribution/guest_presentations/03_intro_data_analytics.ipynb) by [tobiasraabe](https://github.com/tobiasraabe)
-
-First, I provide a brief overview on Python and data analytics, supplementary material and state-of-the-art applications in the slides. Second, a short introduction to pandas and its powerful applications is shown in the accompanying Jupyter notebook.
-
-### [Introduction to the NLSY Dataset](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/guest_presentations/04_intro_nlsy_dataset.pdf) by [benediktkauf](https://github.com/benediktkauf)
-
-I provide a brief overview on the NLSY dataset.
+We discuss the basic ideas behind sensitivity analysis of computational models. We distinguish between qualitative and quantitative sensitivity analysis and contrast the term `sensitivity analysis` to its use in the econometrics literature.
 
 ## Overviews
 
@@ -54,10 +38,7 @@ in sharing the risks associated with learning about ability and varying market c
 
 ### [Tyranny of metrics](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/overviews/03_tyranny_of_metrics.pdf)
 
->How the obsession with quantifying human performance threatens our schools, medical care, businesses, and government.
-Today, organizations of all kinds are ruled by the belief that the path to success is quantifying human performance, publicizing the results, and dividing up the rewards based on the numbers. But in our zeal to instill the evaluation process with scientific rigor, we've gone from measuring performance to fixating on measuring itself. The result is a tyranny of metrics that threatens the quality of our lives and most important institutions. In this timely and powerful book, Jerry Muller uncovers the damage our obsession with metrics is causing―and shows how we can begin to fix the problem.
-Filled with examples from education, medicine, business and finance, government, the police and military, and philanthropy and foreign aid, this brief and accessible book explains why the seemingly irresistible pressure to quantify performance distorts and distracts, whether by encouraging "gaming the stats" or "teaching to the test." That's because what can and does get measured is not always worth measuring, may not be what we really want to know, and may draw effort away from the things we care about. Along the way, we learn why paying for measured performance doesn't work, why surgical scorecards may increase deaths, and much more. But metrics can be good when used as a complement to―rather than a replacement for―judgment based on personal experience, and Muller also gives examples of when metrics have been beneficial.
-Complete with a checklist of when and how to use metrics, The Tyranny of Metrics is an essential corrective to a rarely questioned trend that increasingly affects us all.
+>How the obsession with quantifying human performance threatens our schools, medical care, businesses, and government. Today, organizations of all kinds are ruled by the belief that the path to success is quantifying human performance, publicizing the results, and dividing up the rewards based on the numbers. But in our zeal to instill the evaluation process with scientific rigor, we've gone from measuring performance to fixating on measuring itself. The result is a tyranny of metrics that threatens the quality of our lives and most important institutions. In this timely and powerful book, Jerry Muller uncovers the damage our obsession with metrics is causing―and shows how we can begin to fix the problem. Filled with examples from education, medicine, business and finance, government, the police and military, and philanthropy and foreign aid, this brief and accessible book explains why the seemingly irresistible pressure to quantify performance distorts and distracts, whether by encouraging "gaming the stats" or "teaching to the test." That's because what can and does get measured is not always worth measuring, may not be what we really want to know, and may draw effort away from the things we care about. Along the way, we learn why paying for measured performance doesn't work, why surgical scorecards may increase deaths, and much more. But metrics can be good when used as a complement to―rather than a replacement for―judgment based on personal experience, and Muller also gives examples of when metrics have been beneficial. Complete with a checklist of when and how to use metrics, The Tyranny of Metrics is an essential corrective to a rarely questioned trend that increasingly affects us all.
 
 * Muller, J. Z. (2018). [*The tyranny of metrics*](https://press.princeton.edu/titles/11218.html). Princeton University Press.
 
@@ -95,18 +76,10 @@ We share some basic research skills that turned out to be useful.
 
 ### [Reading scientific papers](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/research_skills/01_reading_scientific_papers.pdf)
 
-We disuss some best practices on how to read scientific papers.
+We discuss some best practices on how to read scientific papers.
 
 ### [Mathematical modeling](https://github.com/HumanCapitalAnalysis/talks/blob/master/distribution/research_skills/02_mathematical_modeling.pdf)
 
 We discuss the basic ideas of mathematical modeling with special reference to economic models.
-
-## Sandbox
-
-We share some drafts for material that we hope to develop into full lectures.
-
-### Causal models [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/HumanCapitalAnalysis/talks/master?filepath=sandbox%2F01_causal_models%2Flecture.ipynb)
-
-We provide a brief intro to the world of causal modeling.
 
 [![Build Status](https://travis-ci.org/HumanCapitalAnalysis/talks.svg?branch=master)](https://travis-ci.org/HumanCapitalAnalysis/talks)
