@@ -6,6 +6,22 @@
 \end{center}\end{frame}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
+\begin{frame}\textbf{Alternatives}\vspace{0.3cm}
+
+\begin{itemize}\setlength\itemsep{1em}
+  \item variance-based
+  \item moment-independent
+  \item information-based
+\end{itemize}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+		\LARGE\textit{Variance-based methods}
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{frame}
 	\begin{align}\label{Variance decomposition}
 	V[Y] = V_{X_i}[E_{X_{\sim i}}[Y\mid X_i]] + E_{X_i}[V_{\vec{X}_{\sim i}}[Y\mid X_i]]
@@ -30,7 +46,7 @@ S^M_i & = \frac{V_{X_i}[E_{\vec{X}_{\sim i}}[Y\mid X_i]]}{V[Y]}
 \begin{frame}\textbf{Total effect}\vspace{0.3cm}
 
 \begin{itemize}
-\item We want to identify the factors that we can fix at their value without significantly reducing the output variance. 
+\item We want to identify the factors that we can fix at their value without significantly reducing the output variance.
 \end{itemize}
 
 \begin{align*}

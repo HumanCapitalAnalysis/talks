@@ -13,18 +13,48 @@
 %-------------------------------------------------------------------------------
 \begin{frame}\textbf{Definitions}\vspace{0.3cm}
 
-\textit{Sensitivity analysis} The study of how uncertainty in the output of a model (numerical or otherwise) can be apportioned to different sources of uncertainty in the model input
+Uncertainty and sensitivity analysis study how the uncertainties in the the model input $\vec{X} = (X_1, \hdots, X_K)$ affect the model's quantities of interest:
 
-\begin{itemize}
-  \item uncertainty propagation
+\begin{align*}
+  Y = f(\vec{X})
+\end{align*}
+
+
+\begin{itemize}\setlength\itemsep{1em}
+  \item uncertainty analysis quantifies the output variability
+  \item sensitivity analysis describes the relative importance of each input in determining its variability
 \end{itemize}
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Sensitivity methods}\vspace{0.3cm}
+
+\begin{itemize}\setlength\itemsep{1em}
+\item qualitative, e.g. Morris screening
+\item quantitative, e.g. variance-based methods
+\end{itemize}
+
+\end{frame}
+
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Sensitivity insights}\vspace{0.3cm}
+
+\begin{itemize}\setlength\itemsep{1em}
+  \item \textit{factor prioritization}, determining most important model inputs
+  \item \textit{factor fixing}, identifying the least important factor which can be ignored
+  \item \textit{stability}, determining region of stability of for optimal decision
+\end{itemize}
+
 \end{frame}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
 \begin{frame}\textbf{Selected issues}\vspace{0.3cm}
 
 \begin{itemize}\setlength\itemsep{1em}
-  \item computational challenges
+  \item computational cost
   \item deterministic vs. probabilistic
   \item independent vs. dependent
   \item global vs. local
@@ -37,19 +67,8 @@
 
 \begin{itemize}\setlength\itemsep{1em}
   \item quantitative vs. qualitative
-  \item interaction vs. dependence
+  \item interaction vs. additivity
   \item full model vs. surrogate
-\end{itemize}
-
-\end{frame}
-%-------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------
-\begin{frame}\textbf{Settings}\vspace{0.3cm}
-
-\begin{itemize}\setlength\itemsep{1em}
-  \item \textit{factor prioritization}, i.e. which factor is the one that, if determined (i.e., fixed to its true, albeit unknown, value), would lead
-to the greatest reduction in the variance of the output.
-  \item \textit{factor fixing}, i.e. which factor or the subset of input factors that we can fix at any given value over their range of uncertainty without significantly reducing the output variance.
 \end{itemize}
 
 \end{frame}
