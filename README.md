@@ -17,7 +17,7 @@ We discuss the simulation of choice probabilities in the context of a Probit mod
 
 ### [Sensitivity analysis](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/02-Sensitivity-analysis/slides.pdf)
 
-We discuss the basic ideas behind sensitivity analysis of computational models. We distinguish between qualitative and quantitative sensitivity analysis and contrast the term `sensitivity analysis` to its use in the econometrics literature.
+We discuss the basic ideas behind sensitivity analysis of computational models. We distinguish between qualitative and quantitative sensitivity analysis and contrast the term ``sensitivity analysis`` to its use in the econometrics literature.
 
 ## Overviews
 
