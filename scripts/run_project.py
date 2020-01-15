@@ -15,12 +15,15 @@ for dirname in DIRNAMES:
 
     for subdir in glob.glob("*"):
         os.chdir(subdir)
+
+        # run slides
         os.chdir("slides")
+        subprocess.check_call(["run-slides"])
+        os.chdir("../")
 
-        for task in ['pdflatex', 'bibtex', 'pdflatex', 'pdflatex']:
-            subprocess.check_call(task + ' main', shell=True)
+        # run notebook
+        subprocess.check_call(["run-notebook"])
 
-        shutil.copy("main.pdf", "../slides.pdf")
+        os.chdir("../")
 
-        os.chdir("../../")
     os.chdir("../")

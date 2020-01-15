@@ -15,9 +15,13 @@ We discuss the simulation of choice probabilities in the context of a Probit mod
       width="109" height="20">
 </a>
 
-### [Sensitivity analysis](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/02-Sensitivity-analysis/slides.pdf)
+### [Sensitivity analysis](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/02-sensitivity-analysis/slides.pdf)
 
 We discuss the basic ideas behind sensitivity analysis of computational models. We distinguish between qualitative and quantitative sensitivity analysis and contrast the term ``sensitivity analysis`` to its use in the econometrics literature.
+
+### [High performance computing using Python](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/03-high-performance-python/slides.pdf)
+
+We present the basics of using Python for high performance computing.
 
 ## Overviews
 
