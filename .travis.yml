@@ -10,6 +10,10 @@ before_install:
     - sudo apt-get install texlive texlive-science texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra
     - sudo apt-get install pdftk
     - pip install matplotlib
+    - ./scripts/travis_miniconda.sh
+    - PATH="$HOME/miniconda/bin:$PATH"
+    - conda env create -f configurations/environment.yml
+    - source activate teaching-talks
 
 script:
     - texhash
