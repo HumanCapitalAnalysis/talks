@@ -11,6 +11,19 @@
     The independent distributions of the input random variables are usually:
     :math:`x i ∼ Uniform[−π, π]`, for all :math:`i = 1, 2, 3`.
 
+    There are default values for the two parameters of the function with a = 7 and b = 0.1 as
+    these are the values used in Crestaux et al. (2007) and Marrel et al. (2009). The research in
+    Sobol & Levitan (1999) is based on a = 7 and b = 0.05.
+
+    This module contains the following main elements in this order:
+
+    [1] evaluation of Ishigami function
+
+    [2] analytical solutions to overall variance and sensitivity indices
+
+    [3] simulated solutions to overall variance and sensitivity indices
+
+
     References
     ----------
 
@@ -33,7 +46,7 @@
 import numpy as np
 
 
-def ishigami_readable(x, a=0.7, b=0.1):
+def evaluate_ishigami_readable(x, a=7, b=0.1):
     """Evaluate Ishigami equation with a focus on readability
 
     Parameters
@@ -58,7 +71,7 @@ def ishigami_readable(x, a=0.7, b=0.1):
     return np.sin(x[0]) + a * np.sin(x[1]) ** 2 + b * x[2] ** 4 * np.sin(x[0])
 
 
-def ishigami_fast(x, a=0.7, b=0.1):
+def evaluate_ishigami(x, a=7, b=0.1):
     """ Evaluate Ishigami equation with a focus on speed.
 
     This function is a vectorized implementation for the evaluation of the Ishigami equation.
@@ -94,7 +107,7 @@ def ishigami_fast(x, a=0.7, b=0.1):
     return rslt
 
 
-def get_ishigami_overall_variance(a=0.7, b=0.1):
+def compute_analytically_overall_variance(a=7, b=0.1):
     """Compute overall variance.
 
     Parameters
@@ -119,7 +132,7 @@ def get_ishigami_overall_variance(a=0.7, b=0.1):
     return rslt
 
 
-def get_ishigami_main_effects(a=0.7, b=0.1):
+def compute_analytically_main_effects(a=7, b=0.1):
     """Compute main effect indices.
 
     Parameters
@@ -139,7 +152,7 @@ def get_ishigami_main_effects(a=0.7, b=0.1):
 
     """
 
-    scale = get_ishigami_overall_variance(a, b)
+    scale = compute_analytically_overall_variance(a, b)
 
     effects = list()
     effects += [0.5 * (1 + (b * np.pi ** 4 / 5)) ** 2]
@@ -151,7 +164,7 @@ def get_ishigami_main_effects(a=0.7, b=0.1):
     return rslt
 
 
-def get_ishigami_total_effects(a=0.7, b=0.1):
+def compute_analytically_total_effects(a=7, b=0.1):
     """Compute total effect indices.
 
     Parameters
@@ -171,7 +184,7 @@ def get_ishigami_total_effects(a=0.7, b=0.1):
 
     """
 
-    scale = get_ishigami_overall_variance(a, b)
+    scale = compute_analytically_overall_variance(a, b)
     
     effects = list()
     effects += [0.5 * (1 + (b * np.pi ** 4 / 5)) ** 2 + (8 * b ** 2 * np.pi ** 8) / 225]
@@ -181,3 +194,56 @@ def get_ishigami_total_effects(a=0.7, b=0.1):
     rslt = np.array(effects) / scale
     
     return rslt
+
+
+def compute_simulation_overall_variance(num_draws, seed=123):
+    np.random.seed(seed)
+    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_draws, 3))
+
+    return np.var(evaluate_ishigami(inputs))
+
+
+def compute_simulation_main_effect(num_outer, num_inner, which, seed=123):
+    np.random.seed(seed)
+
+    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
+
+    uncond_var = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+
+    inputs[:, :, which] = inputs[:, 0, which].reshape(num_outer, 1)
+    return np.var(np.mean(evaluate_ishigami(inputs), axis=1)) / uncond_var
+
+
+def compute_simulation_main_effect_readable(num_outer, num_inner, which, seed=123):
+    np.random.seed(seed)
+
+    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
+    uncond_var = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+
+    rslt_outer = list()
+    for i in range(num_outer):
+
+        inputs[i, :, which] = inputs[i, 0, which]
+
+        rslt_inner = list()
+        for j in range(num_inner):
+            x = inputs[i, j, :]
+            rslt_inner.append(evaluate_ishigami(x))
+
+        rslt_outer.append(np.mean(rslt_inner))
+
+    return np.var(rslt_outer) / uncond_var
+
+
+def compute_simulation_total_effect(num_outer, num_inner, which, seed=120):
+    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
+
+    uncond_var = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+
+    for not_which in set(range(3)).difference([which]):
+        inputs[:, :, not_which] = inputs[:, 0, not_which].reshape(num_outer, 1)
+    cond_var = np.var(np.mean(evaluate_ishigami(inputs), axis=1))
+
+    return 1 - cond_var / uncond_var
+
+

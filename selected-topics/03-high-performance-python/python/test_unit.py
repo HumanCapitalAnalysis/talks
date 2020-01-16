@@ -23,3 +23,13 @@ def test_2():
         rslt.append(ishigami_readable(input_))
 
     np.testing.assert_equal(ishigami_fast(inputs), rslt)
+    
+def test_3():
+    
+    num_draws = 10000000
+    stat_1 = get_unconditional_variance_fast(num_draws)
+    stat_2 = get_ishigami_unconditional_variance()
+    
+    np.testing.assert_almost_equal(stat_1, stat_2, decimal=2)
+    
+    

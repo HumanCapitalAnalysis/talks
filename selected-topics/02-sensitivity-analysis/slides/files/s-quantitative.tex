@@ -56,3 +56,52 @@ S^T_i & = \frac{E_{\vec{X} \sim i}[V_{X_i}[Y \mid \vec{X}_{\sim i}]]}{V[Y]} = 1 
 \end{frame}
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
+\begin{frame}\begin{center}
+		\LARGE\textit{Ishigami function}
+
+		\begin{align*}
+				f(\vec{x}) = \sin(x_1) + a\, \sin^2 (x_2) + b\, x_3^4\, \sin(x_1)
+		\end{align*}
+
+\end{center}\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}
+
+	\begin{itemize}\setlength\itemsep{1em}
+		\item The Ishigami function of \citeA{Ishigami.1990} is used as an example for uncertainty and sensitivity analysis methods, because it exhibits strong nonlinearity and nonmonotonicity.
+
+		\item It also has a peculiar dependence on $x_3$, as described by \citeA{Sobol.1999}.
+
+		 \item The independent distributions of the input random variables are usually: $x_i \sim Uniform[-\pi, \pi]$, for all $i = 1, 2, 3$.
+	\end{itemize}
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Reference values}\vspace{0.3cm}
+
+\begin{align*}
+	\var(Y) = \frac{a^2}{8} + \frac{b \pi^4}{5} + \frac{b^2\pi^8}{18} + \frac{1}{2}
+\end{align*}
+
+\begin{align*}
+S_1 & = \frac{1}{2} *  \left(1 + \frac{b\pi^4}{5}\right)^2 \; \var(Y)^{-1} \\
+S_2 & = \frac{a^2}{8} \; \var(Y)^{-1} \\
+S_3 & = 0
+\end{align*}
+
+
+\end{frame}
+%-------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
+\begin{frame}\textbf{Total effect}\vspace{0.3cm}
+
+\begin{align*}
+S^T_1 & = \left(\frac{1}{2} *  \left(1 +  \frac{b\pi^4}{5}\right)^2  +  \frac{8 b^2 \pi^8}{225}\right) \; \var(Y)^{-1}\\
+S^T_2 & = \frac{a^2}{8} \; \var(Y)^{-1} \\
+S^T_3 & =  \frac{8 b^2 \pi^8}{225} \; \var(Y)^{-1}
+\end{align*}
+
+
+\end{frame}

@@ -24,9 +24,9 @@ def get_conditional_variance_fast(num_outer, num_inner, which, seed=123):
     
     np.random.seed(seed)
     
-    rslt = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
-    rslt[:, :, which] = rslt[:, 0, which].reshape(num_outer, 1)
-    return np.var(np.apply_along_axis(np.mean, 1, np.apply_along_axis(ishigami_readable, 2, rslt)))
+    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
+    inputs[:, :, which] = inputs[:, 0, which].reshape(num_outer, 1)
+    return np.var(np.mean(ishigami_fast(inputs), axis=1))
 
 
 def get_conditional_variance_readable(num_outer, num_inner, which, seed=123):
