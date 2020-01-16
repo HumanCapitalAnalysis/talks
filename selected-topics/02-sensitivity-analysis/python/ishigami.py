@@ -80,19 +80,19 @@ def evaluate_ishigami(x, a=7, b=0.1):
     ----------
 
     x : numpy.ndarray
-        evaluation points for Ishigami equation.
+        Evaluation points for Ishigami equation.
 
     a : float, optional
-        first parameter in Ishigami equation (default is 0.7).
+        First parameter in Ishigami equation (default is 0.7).
 
     b : float, optional
-        second parameter in Ishigami equation (default is 0.1).
+        Second parameter in Ishigami equation (default is 0.1).
 
     Returns
     -------
 
     rslt : numpy.ndarray
-        evaluations of the Ishigami equation
+        Evaluations of the Ishigami equation
 
     Notes
     -----
@@ -108,47 +108,46 @@ def evaluate_ishigami(x, a=7, b=0.1):
 
 
 def compute_analytically_overall_variance(a=7, b=0.1):
-    """Compute overall variance.
+    """Compute overall variance analytically.
 
     Parameters
     ----------
 
     a : float, optional
-        first parameter in Ishigami equation (default is 0.7).
+        First parameter in Ishigami equation (default is 0.7).
 
     b : float, optional
-        second parameter in Ishigami equation (default is 0.1).
+        Second parameter in Ishigami equation (default is 0.1).
 
     Returns
     -------
 
     rslt : float
-        overall variance.
+        Overall variance.
 
     """
-
     rslt = (a ** 2 / 8.0) + (b * (np.pi ** 4)) / 5.0 + (b ** 2 * (np.pi ** 8)) / 18.0 + 0.5
 
     return rslt
 
 
 def compute_analytically_main_effects(a=7, b=0.1):
-    """Compute main effect indices.
+    """Compute main effect indices analytically.
 
     Parameters
     ----------
 
     a : float, optional
-        first parameter in Ishigami equation (default is 0.7).
+        First parameter in Ishigami equation (default is 0.7).
 
     b : float, optional
-        second parameter in Ishigami equation (default is 0.1).
+        Second parameter in Ishigami equation (default is 0.1).
 
     Returns
     -------
 
     rslt : numpy.ndarray
-        main effect indices.
+        Main effect indices.
 
     """
 
@@ -165,22 +164,22 @@ def compute_analytically_main_effects(a=7, b=0.1):
 
 
 def compute_analytically_total_effects(a=7, b=0.1):
-    """Compute total effect indices.
+    """Compute total effect indices analytically.
 
     Parameters
     ----------
 
     a : float, optional
-        first parameter in Ishigami equation (default is 0.7).
+        First parameter in Ishigami equation (default is 0.7).
 
     b : float, optional
-        second parameter in Ishigami equation (default is 0.1).
+        Second parameter in Ishigami equation (default is 0.1).
 
     Returns
     -------
 
     rslt : numpy.ndarray
-        total effect indices.
+        Total effect indices.
 
     """
 
@@ -197,6 +196,24 @@ def compute_analytically_total_effects(a=7, b=0.1):
 
 
 def compute_simulation_overall_variance(num_draws, seed=123):
+    """Compute overall variance by simulation.
+
+    Parameters
+    ----------
+
+    num_draws : integer
+        Number of draws for simulation.
+
+    seed : integer, optional
+        Seed value for random number generator.
+
+    Returns
+    -------
+
+    rslt : numpy.float
+        Overall variance of model output.
+
+    """
     np.random.seed(seed)
     inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_draws, 3))
 
@@ -204,25 +221,74 @@ def compute_simulation_overall_variance(num_draws, seed=123):
 
 
 def compute_simulation_main_effect(num_outer, num_inner, which, seed=123):
+    """Compute main effect by simulation.
+
+    Parameters
+    ----------
+
+    num_outer : integer
+        Number of draws for outer simulation loop.
+
+    num_inner : integer
+        Number of draws for inner simulation loop.
+
+    which : integer
+        Position of main effect variable.
+
+    seed : integer, optional
+        Seed value for random number generator.
+
+    Returns
+    -------
+
+    rslt : numpy.float
+        Main effect parameter.
+
+    """
     np.random.seed(seed)
 
     inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
-
-    uncond_var = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+    unconditional_variance = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
 
     inputs[:, :, which] = inputs[:, 0, which].reshape(num_outer, 1)
-    return np.var(np.mean(evaluate_ishigami(inputs), axis=1)) / uncond_var
+    rslt = np.var(np.mean(evaluate_ishigami(inputs), axis=1)) / unconditional_variance
+
+    return rslt
 
 
 def compute_simulation_main_effect_readable(num_outer, num_inner, which, seed=123):
+    """Compute main effect by simulation with a focus on readability.
+
+    Parameters
+    ----------
+
+    num_outer : integer
+        Number of draws for outer simulation loop.
+
+    num_inner : integer
+        Number of draws for inner simulation loop.
+
+    which : integer
+        Position of main effect variable.
+
+    seed : integer, optional
+        Seed value for random number generator.
+
+    Returns
+    -------
+
+    rslt : numpy.float
+        Main effect parameter.
+
+    """
     np.random.seed(seed)
 
     inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
-    uncond_var = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+    unconditional_variance = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
 
     rslt_outer = list()
-    for i in range(num_outer):
 
+    for i in range(num_outer):
         inputs[i, :, which] = inputs[i, 0, which]
 
         rslt_inner = list()
@@ -232,18 +298,45 @@ def compute_simulation_main_effect_readable(num_outer, num_inner, which, seed=12
 
         rslt_outer.append(np.mean(rslt_inner))
 
-    return np.var(rslt_outer) / uncond_var
+    rslt = np.var(rslt_outer) / unconditional_variance
+
+    return rslt
 
 
 def compute_simulation_total_effect(num_outer, num_inner, which, seed=120):
-    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
+    """Compute total effect by simulation.
 
-    uncond_var = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+    Parameters
+    ----------
+
+    num_outer : integer
+        Number of draws for outer simulation loop.
+
+    num_inner : integer
+        Number of draws for inner simulation loop.
+
+    which : integer
+        Position of main effect variable.
+
+    seed : integer, optional
+        Seed value for random number generator.
+
+    Returns
+    -------
+
+    rslt : numpy.float
+        Main effect parameter.
+
+    """
+    np.random.seed(seed)
+
+    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
+    unconditional_variance = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
 
     for not_which in set(range(3)).difference([which]):
         inputs[:, :, not_which] = inputs[:, 0, not_which].reshape(num_outer, 1)
-    cond_var = np.var(np.mean(evaluate_ishigami(inputs), axis=1))
+    conditional_variance = np.var(np.mean(evaluate_ishigami(inputs), axis=1))
 
-    return 1 - cond_var / uncond_var
+    rslt = 1 - conditional_variance / unconditional_variance
 
-
+    return rslt
