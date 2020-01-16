@@ -10,11 +10,12 @@ from ishigami import compute_simulation_main_effect_readable
 
 def test_1():
     """ Testing the equality of the fast and readable implementation of the Ishigami evaluations."""
-    num_draws = np.random.randint(6, 10)
-    inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_draws, 3))
+    for _ in range(10):
+        num_draws = np.random.randint(6, 10)
+        inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_draws, 3))
 
-    rslt = [evaluate_ishigami_readable(input_) for input_ in inputs]
-    np.testing.assert_equal(evaluate_ishigami(inputs), rslt)
+        rslt = [evaluate_ishigami_readable(input_) for input_ in inputs]
+        np.testing.assert_equal(evaluate_ishigami(inputs), rslt)
 
 
 def test_2():
@@ -28,13 +29,12 @@ def test_2():
 
 def test_3():
     """Testing equality of the fast and readable implementation of the main effects."""
+    for _ in range(10):
+        num_outer, num_inner, seed = np.random.randint(10, 100, size=3)
+        which = np.random.choice(3)
 
-    num_outer, num_inner, seed = np.random.randint(10, 100, size=3)
-    which = np.random.choice(3)
+        args = (num_outer, num_inner, which, seed)
+        stat_1 = compute_simulation_main_effect_readable(*args)
+        stat_2 = compute_simulation_main_effect(*args)
 
-    args = (num_outer, num_inner, which, seed)
-
-    stat_1 = compute_simulation_main_effect_readable(*args)
-    stat_2 = compute_simulation_main_effect(*args)
-
-    np.testing.assert_almost_equal(stat_1, stat_2)
+        np.testing.assert_almost_equal(stat_1, stat_2)
