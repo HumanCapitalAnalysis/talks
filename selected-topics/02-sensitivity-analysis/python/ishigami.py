@@ -46,13 +46,13 @@
 import numpy as np
 
 
-def evaluate_ishigami_readable(x, a=7, b=0.1):
+def evaluate_ishigami_readable(input, a=7, b=0.1):
     """Evaluate Ishigami equation with a focus on readability
 
     Parameters
     ----------
 
-    x : numpy.ndarray
+    inputs : numpy.ndarray
         evaluation points for Ishigami equation.
 
     a : float, optional
@@ -68,10 +68,13 @@ def evaluate_ishigami_readable(x, a=7, b=0.1):
         evaluation of the Ishigami equation
 
     """
-    return np.sin(x[0]) + a * np.sin(x[1]) ** 2 + b * x[2] ** 4 * np.sin(x[0])
+    x1, x2, x3 = input
+    rslt = np.sin(x1) + a * np.sin(x2) ** 2 + b * x3 ** 4 * np.sin(x1)
+
+    return rslt
 
 
-def evaluate_ishigami(x, a=7, b=0.1):
+def evaluate_ishigami(inputs, a=7, b=0.1):
     """ Evaluate Ishigami equation with a focus on speed.
 
     This function is a vectorized implementation for the evaluation of the Ishigami equation.
@@ -79,7 +82,7 @@ def evaluate_ishigami(x, a=7, b=0.1):
     Parameters
     ----------
 
-    x : numpy.ndarray
+    inputs : numpy.ndarray
         Evaluation points for Ishigami equation.
 
     a : float, optional
@@ -100,8 +103,7 @@ def evaluate_ishigami(x, a=7, b=0.1):
     [1] https://www.oreilly.com/library/view/python-for-data/9781449323592/ch04.html
 
     """
-
-    x0, x1, x2 = x[..., 0], x[..., 1], x[..., 2]
+    x0, x1, x2 = inputs[..., 0], inputs[..., 1], inputs[..., 2]
     rslt = np.sin(x0) + a * np.sin(x1) ** 2 + b * x2 ** 4 * np.sin(x0)
 
     return rslt
@@ -182,7 +184,6 @@ def compute_analytically_total_effects(a=7, b=0.1):
         Total effect indices.
 
     """
-
     scale = compute_analytically_overall_variance(a, b)
     
     effects = list()

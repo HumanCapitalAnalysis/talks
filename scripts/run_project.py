@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """This module creates the full project. This is useful for the continuous integration workflow."""
 import subprocess
-import shutil
 import glob
 import os
 
@@ -27,3 +26,6 @@ for dirname in DIRNAMES:
         os.chdir("../")
 
     os.chdir("../")
+
+# run pytest
+subprocess.check_call(["pytest"])
