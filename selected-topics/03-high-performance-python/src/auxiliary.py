@@ -92,8 +92,8 @@ def task_mp_no_communication(num_outer, num_inner, which):
 def task_mp_queue(num_outer, num_inner, qout, which):
     """Compute main effect by simulation.
 
-    This function computes the main effects by simulation for
-    one input parameter and puts the result into `qout` container.
+    This function computes the main effects by simulation for one input parameter and puts the
+    result into `qout` container.
 
     Parameters
     ----------
@@ -108,9 +108,8 @@ def task_mp_queue(num_outer, num_inner, qout, which):
         Position of main effect variable.
 
     qout : multiprocessing.Queue
-        Queue container to collect results. A tuple
-        with the identifier of the input parameter
-        and the main effect is put into the quque.
+        Queue container to collect results. A tuple with the identifier of the input parameter
+        and the main effect is put into the queue.
 
     Returns
     -------

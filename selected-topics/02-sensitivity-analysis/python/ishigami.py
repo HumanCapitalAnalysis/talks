@@ -13,7 +13,7 @@
 
     There are default values for the two parameters of the function with a = 7 and b = 0.1 as
     these are the values used in Crestaux et al. (2007) and Marrel et al. (2009). The research in
-    Sobol & Levitan (1999) is based on a = 7 and b = 0.05.
+    Sobol & Levitan (1999) is based on a = 7.0 and b = 0.05.
 
     This module contains the following main elements in this order:
 
@@ -133,11 +133,6 @@ def evaluate_ishigami_numba(input_, a=7, b=0.1):
 
     rslt : numpy.ndarray
         Evaluations of the Ishigami equation
-
-    Notes
-    -----
-
-    [1] https://www.oreilly.com/library/view/python-for-data/9781449323592/ch04.html
 
     """
     x1, x2, x3 = input_
