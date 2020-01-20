@@ -27,3 +27,4 @@ dependencies:
 - simplegeneric
 - pip:
         - linearmodels
+        - jupyter

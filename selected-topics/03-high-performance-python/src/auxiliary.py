@@ -1,15 +1,25 @@
 import sys
+import os
 
+from numpy import f2py
 from numba import jit
 import numpy as np
 
-sys.path.insert(0, "../02-sensitivity-analysis/python")
+sys.path.insert(0, "../../02-sensitivity-analysis/python")
 
 from ishigami import compute_simulation_total_effect
 from ishigami import compute_simulation_main_effect
 from ishigami import evaluate_ishigami_readable
-from ishigami_f2py import evalute_ishigami_f2py
 from ishigami import evaluate_ishigami_numba
+
+cwd = os.getcwd()
+
+os.chdir(os.path.dirname(__file__))
+
+src = open('ishigami.f90', 'rb').read()
+f2py.compile(src, 'ishigami_f2py', "", extension='.f90')
+from ishigami_f2py import evalute_ishigami_f2py
+os.chdir(cwd)
 
 
 @jit(nopython=True)

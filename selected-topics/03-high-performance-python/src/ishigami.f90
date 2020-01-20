@@ -1,24 +1,37 @@
 SUBROUTINE evalute_ishigami_f2py(rslt, inputs, num_evals)
+  !
+  ! Minimal exaple for interfacing FORTRAN and PYHON using the evaluation of
+  ! the Ishigami function as a use case.
+  !
+  !-----------------------------------------------------------------------------
+  ! Dummy variables
+  !-----------------------------------------------------------------------------
 
-    INTEGER, INTENT(IN) :: num_evals
+  DOUBLE PRECISION, INTENT(OUT)   :: rslt(num_evals)
 
-    DOUBLE PRECISION, INTENT(OUT)   :: rslt(num_evals)
+  DOUBLE PRECISION, INTENT(IN)    :: inputs(:, :)
 
-    DOUBLE PRECISION, INTENT(IN)    :: inputs(:, :)
+  INTEGER, INTENT(IN)             :: num_evals
 
-    DOUBLE PRECISION :: a, b
+  !-----------------------------------------------------------------------------
+  ! Local variables
+  !-----------------------------------------------------------------------------
 
+  INTEGER          :: i
 
-    INTEGER :: i
+  DOUBLE PRECISION :: x(3)
 
-    DOUBLE PRECISION :: x(3)
+  !-----------------------------------------------------------------------------
+  ! Algorithm
+  !-----------------------------------------------------------------------------
 
-    a = 7.0
-    b = 0.1
+  DO i = 1, num_evals
 
-    DO i = 1, num_evals
-      x = inputs(i, :)
-      rslt(i) = SIN(x(1)) + a * SIN(x(2)) ** 2 + b * x(3) ** 4 * SIN(x(1))
-    END DO
+    x = inputs(i, :)
+    rslt(i) = SIN(x(1)) + 7.0 * SIN(x(2)) ** 2 + 0.1 * x(3) ** 4 * SIN(x(1))
+
+  END DO
 
 END SUBROUTINE
+!*******************************************************************************
+!*******************************************************************************
