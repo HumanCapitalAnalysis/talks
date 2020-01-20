@@ -43,8 +43,8 @@
     for the gaussian process metamodel. Reliability Engineering & System Safety, 94(3), 742-751.
 
 """
-import numpy as np
 from numba import jit
+import numpy as np
 
 
 def evaluate_ishigami_readable(input_, a=7, b=0.1):
