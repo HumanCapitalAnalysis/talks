@@ -19,9 +19,9 @@ We discuss the simulation of choice probabilities in the context of a Probit mod
 
 We discuss the basic ideas behind sensitivity analysis of computational models. We distinguish between qualitative and quantitative sensitivity analysis and contrast the term ``sensitivity analysis`` to its use in the econometrics literature. We use the Ishigami function (Ishigami and Homma (1990)) to illustrate some of the issues we discuss. The supporting codes are available [here](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/02-sensitivity-analysis/python/ishigami.py).
 
-### [High performance computing using Python](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/03-high-performance-python/slides.pdf)
+### [High-performance computing using Python](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/03-high-performance-python/slides.pdf)
 
-We present the basics of using Python for high performance computing.
+We discuss the different steps in optimizing your code, including the use of suitable libraries for scientific computing, a compilation of code in fast languages as well as parallel, and distributed computing. Using the computation of sensitivity indices as an example, we conduct several hands-on experiments.
 
 ## Overviews
 
