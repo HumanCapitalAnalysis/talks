@@ -75,7 +75,7 @@ def evaluate_ishigami_readable(input_, a=7, b=0.1):
     return rslt
 
 
-def evaluate_ishigami(inputs, a=7, b=0.1):
+def evaluate_ishigami_vectorized(inputs, a=7, b=0.1):
     """ Evaluate Ishigami equation with a focus on speed.
 
     This function is a vectorized implementation for the evaluation of the Ishigami equation.
@@ -189,7 +189,7 @@ def compute_analytically_main_effects(a=7, b=0.1):
 
     effects = list()
     effects += [0.5 * (1 + (b * np.pi ** 4 / 5)) ** 2]
-    effects += [a ** 2 / 8]
+    effects += [a ** 2.0 / 8.0]
     effects += [0]
 
     rslt = np.array(effects) / scale
@@ -250,7 +250,7 @@ def compute_simulation_overall_variance(num_draws, seed=123):
     np.random.seed(seed)
     inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_draws, 3))
 
-    return np.var(evaluate_ishigami(inputs))
+    return np.var(evaluate_ishigami_vectorized(inputs))
 
 
 def compute_simulation_main_effect(num_outer, num_inner, which, seed=123):
@@ -281,10 +281,10 @@ def compute_simulation_main_effect(num_outer, num_inner, which, seed=123):
     np.random.seed(seed)
 
     inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
-    unconditional_variance = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+    unconditional_variance = np.var(evaluate_ishigami_vectorized(inputs.reshape(num_outer * num_inner, 3)))
 
     inputs[:, :, which] = inputs[:, 0, which].reshape(num_outer, 1)
-    rslt = np.var(np.mean(evaluate_ishigami(inputs), axis=1)) / unconditional_variance
+    rslt = np.var(np.mean(evaluate_ishigami_vectorized(inputs), axis=1)) / unconditional_variance
 
     return rslt
 
@@ -317,7 +317,7 @@ def compute_simulation_main_effect_readable(num_outer, num_inner, which, seed=12
     np.random.seed(seed)
 
     inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
-    unconditional_variance = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+    unconditional_variance = np.var(evaluate_ishigami_vectorized(inputs.reshape(num_outer * num_inner, 3)))
 
     rslt_outer = list()
 
@@ -327,7 +327,7 @@ def compute_simulation_main_effect_readable(num_outer, num_inner, which, seed=12
         rslt_inner = list()
         for j in range(num_inner):
             x = inputs[i, j, :]
-            rslt_inner.append(evaluate_ishigami(x))
+            rslt_inner.append(evaluate_ishigami_vectorized(x))
 
         rslt_outer.append(np.mean(rslt_inner))
 
@@ -364,11 +364,11 @@ def compute_simulation_total_effect(num_outer, num_inner, which, seed=120):
     np.random.seed(seed)
 
     inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_outer, num_inner, 3))
-    unconditional_variance = np.var(evaluate_ishigami(inputs.reshape(num_outer * num_inner, 3)))
+    unconditional_variance = np.var(evaluate_ishigami_vectorized(inputs.reshape(num_outer * num_inner, 3)))
 
     for not_which in set(range(3)).difference([which]):
         inputs[:, :, not_which] = inputs[:, 0, not_which].reshape(num_outer, 1)
-    conditional_variance = np.var(np.mean(evaluate_ishigami(inputs), axis=1))
+    conditional_variance = np.var(np.mean(evaluate_ishigami_vectorized(inputs), axis=1))
 
     rslt = 1 - conditional_variance / unconditional_variance
 
