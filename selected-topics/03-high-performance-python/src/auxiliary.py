@@ -1,16 +1,65 @@
 import sys
 
+from numba import jit
 import numpy as np
 
 sys.path.insert(0, "../02-sensitivity-analysis/python")
 
 from ishigami import compute_simulation_total_effect
-
 from ishigami import compute_simulation_main_effect
 from ishigami import evaluate_ishigami_readable
+from ishigami_f2py import evalute_ishigami_f2py
+from ishigami import evaluate_ishigami_numba
 
 
-def evaluate_ishigami_loop(inputs):
+@jit(nopython=True)
+def evaluate_ishigami_numba_loop(inputs):
+    """Evaluate Ishigami function.
+
+    Parameters
+    ----------
+
+    inputs : numpy.ndarray
+        Evaluation points for Ishigami equation.
+
+    Returns
+    -------
+
+    results : numpy.ndarray
+        Results from evaluation of `inputs`.
+
+    """
+    results = np.empty(inputs.shape[0])
+
+    for i in range(inputs.shape[0]):
+        results[i] = evaluate_ishigami_numba(inputs[i, :])
+
+    return results
+
+
+def evaluate_ishigami_f2py_loop(inputs):
+    """Evaluate Ishigami function.
+
+    Parameters
+    ----------
+
+    inputs : numpy.ndarray
+        Evaluation points for Ishigami equation.
+
+    Returns
+    -------
+
+    results : numpy.ndarray
+        Results from evaluation of `inputs`.
+
+    """
+
+    results = evalute_ishigami_f2py(inputs, inputs.shape[0])
+
+    return results
+
+
+def evaluate_ishigami_readable_loop(inputs):
     """Evaluate Ishigami function.
 
     Parameters
@@ -36,7 +85,7 @@ def evaluate_ishigami_loop(inputs):
 
 def task_mp_no_communication(num_outer, num_inner, which):
     print(f"... started on input parameter {which}")
-    rslt = compute_simulation_main_effect(num_outer, num_inner, which)
+    _ = compute_simulation_main_effect(num_outer, num_inner, which)
     print(f"... finished input parameter {which}")
 
 
@@ -71,6 +120,7 @@ def task_mp_queue(num_outer, num_inner, qout, which):
     """
     rslt = compute_simulation_main_effect(num_outer, num_inner, which)
     qout.put((which, rslt))
+
 
 def task_mp_management(num_outer, num_inner, task):
     label, which = task

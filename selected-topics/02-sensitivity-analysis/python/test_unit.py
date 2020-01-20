@@ -3,6 +3,7 @@ import numpy as np
 from ishigami import compute_analytically_overall_variance
 from ishigami import compute_simulation_overall_variance
 from ishigami import evaluate_ishigami_readable
+from ishigami import evaluate_ishigami_numba
 from ishigami import evaluate_ishigami
 from ishigami import compute_simulation_main_effect
 from ishigami import compute_simulation_main_effect_readable
@@ -15,6 +16,9 @@ def test_1():
         inputs = np.random.uniform(low=-np.pi, high=np.pi, size=(num_draws, 3))
 
         rslt = [evaluate_ishigami_readable(input_) for input_ in inputs]
+        np.testing.assert_equal(evaluate_ishigami(inputs), rslt)
+
+        rslt = [evaluate_ishigami_numba(input_) for input_ in inputs]
         np.testing.assert_equal(evaluate_ishigami(inputs), rslt)
 
 

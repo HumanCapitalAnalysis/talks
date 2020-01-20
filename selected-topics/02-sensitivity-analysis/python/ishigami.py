@@ -44,19 +44,20 @@
 
 """
 import numpy as np
+from numba import jit
 
 
-def evaluate_ishigami_readable(input, a=7, b=0.1):
+def evaluate_ishigami_readable(input_, a=7, b=0.1):
     """Evaluate Ishigami equation with a focus on readability
 
     Parameters
     ----------
 
-    inputs : numpy.ndarray
+    input_ : numpy.ndarray
         evaluation points for Ishigami equation.
 
     a : float, optional
-        first parameter in Ishigami equation (default is 0.7).
+        first parameter in Ishigami equation (default is 7.0).
 
     b : float, optional
         second parameter in Ishigami equation (default is 0.1).
@@ -68,7 +69,7 @@ def evaluate_ishigami_readable(input, a=7, b=0.1):
         evaluation of the Ishigami equation
 
     """
-    x1, x2, x3 = input
+    x1, x2, x3 = input_
     rslt = np.sin(x1) + a * np.sin(x2) ** 2 + b * x3 ** 4 * np.sin(x1)
 
     return rslt
@@ -105,6 +106,42 @@ def evaluate_ishigami(inputs, a=7, b=0.1):
     """
     x0, x1, x2 = inputs[..., 0], inputs[..., 1], inputs[..., 2]
     rslt = np.sin(x0) + a * np.sin(x1) ** 2 + b * x2 ** 4 * np.sin(x0)
+
+    return rslt
+
+
+@jit(nopython=True)
+def evaluate_ishigami_numba(input_, a=7, b=0.1):
+    """ Evaluate Ishigami equation with a focus on speed.
+
+    This function is a numbarized implementation for the evaluation of the Ishigami equation.
+
+    Parameters
+    ----------
+
+    input_ : numpy.ndarray
+        Evaluation points for Ishigami equation.
+
+    a : float, optional
+        First parameter in Ishigami equation (default is 0.7).
+
+    b : float, optional
+        Second parameter in Ishigami equation (default is 0.1).
+
+    Returns
+    -------
+
+    rslt : numpy.ndarray
+        Evaluations of the Ishigami equation
+
+    Notes
+    -----
+
+    [1] https://www.oreilly.com/library/view/python-for-data/9781449323592/ch04.html
+
+    """
+    x1, x2, x3 = input_
+    rslt = np.sin(x1) + a * np.sin(x2) ** 2 + b * x3 ** 4 * np.sin(x1)
 
     return rslt
 

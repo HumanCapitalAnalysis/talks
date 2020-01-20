@@ -17,7 +17,7 @@ We discuss the simulation of choice probabilities in the context of a Probit mod
 
 ### [Sensitivity analysis](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/02-sensitivity-analysis/slides.pdf)
 
-We discuss the basic ideas behind sensitivity analysis of computational models. We distinguish between qualitative and quantitative sensitivity analysis and contrast the term ``sensitivity analysis`` to its use in the econometrics literature.
+We discuss the basic ideas behind sensitivity analysis of computational models. We distinguish between qualitative and quantitative sensitivity analysis and contrast the term ``sensitivity analysis`` to its use in the econometrics literature. We use the Ishigami function (Ishigami and Homma (1990)) to illustrate some of the issues we discuss. The supporting codes are available [here](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/02-sensitivity-analysis/python/ishigami.py).
 
 ### [High performance computing using Python](https://github.com/HumanCapitalAnalysis/talks/blob/master/selected-topics/03-high-performance-python/slides.pdf)
 
@@ -85,5 +85,9 @@ We discuss some best practices on how to read scientific papers.
 ### [Mathematical modeling](https://github.com/HumanCapitalAnalysis/talks/blob/master/research-skills/02-mathematical-modeling/slides.pdf)
 
 We discuss the basic ideas of mathematical modeling with special reference to economic models.
+
+## References
+
+* Ishigami and Homma (1990)
 
 [![Build Status](https://travis-ci.org/HumanCapitalAnalysis/talks.svg?branch=master)](https://travis-ci.org/HumanCapitalAnalysis/talks)

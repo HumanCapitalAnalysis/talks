@@ -18,6 +18,8 @@ dependencies:
 - seaborn
 - jupyter
 - pip
+- numba
+- mpi4py
 - pygraphviz
 - rise
 - r-essentials
