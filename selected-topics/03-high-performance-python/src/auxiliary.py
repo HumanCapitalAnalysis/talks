@@ -1,3 +1,4 @@
+import glob
 import sys
 import os
 
@@ -15,11 +16,11 @@ from ishigami import evaluate_ishigami_numba
 cwd = os.getcwd()
 
 os.chdir(os.path.dirname(__file__))
-
-src = open('ishigami.f90', 'rb').read()
-f2py.compile(src, 'ishigami_f2py', "", extension='.f90')
-from ishigami_f2py import evalute_ishigami_f2py
-os.chdir(cwd)
+if not glob.glob("ishigami_f2py*"):
+    src = open('ishigami.f90', 'rb').read()
+    f2py.compile(src, 'ishigami_f2py', "", extension='.f90')
+    from ishigami_f2py import evalute_ishigami_f2py
+    os.chdir(cwd)
 
 
 @jit(nopython=True)
