@@ -1,4 +1,4 @@
-"""" Example script MPI point-to-point communication
+"""" Example script MPI point-to-point communication.
 
     This module illustrates the MPI point-to-point communication for a Numpy array.
 
@@ -19,7 +19,7 @@ import numpy
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
-# passing MPI datatypes explicitly
+# passing MPI datatype explicitly
 if rank == 0:
     data = numpy.arange(1000, dtype='i')
     comm.Send([data, MPI.INT], dest=1, tag=77)

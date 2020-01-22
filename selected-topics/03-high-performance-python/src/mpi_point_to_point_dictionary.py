@@ -1,4 +1,4 @@
-"""" Example script MPI point-to-point communication
+"""" Example script MPI point-to-point communication.
 
     This module illustrates the MPI point-to-point communication for a dictionary.
 
