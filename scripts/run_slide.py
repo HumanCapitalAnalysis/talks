@@ -2,6 +2,10 @@
 """This script creates a set of slides."""
 import subprocess as sp
 import shutil
+import os
+
+if not os.path.exists("main.tex"):
+    raise SystemExit("\n .. no source file available\n")
 
 
 for task in ['pdflatex', 'bibtex', 'pdflatex', 'pdflatex']:
