@@ -17,11 +17,17 @@ for dirname in DIRNAMES:
 
         # run slides
         os.chdir("slides")
-        subprocess.check_call(["run-slides"])
+        subprocess.check_call(["run-slide"])
         os.chdir("../")
 
         # run notebook
         subprocess.check_call(["run-notebook"])
+
+        # run modules
+        try:
+            subprocess.check_call(["python run_modules"])
+        except FileNotFoundError:
+            pass
 
         os.chdir("../")
 
