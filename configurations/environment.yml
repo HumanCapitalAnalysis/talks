@@ -6,7 +6,6 @@ channels:
 - r
 
 dependencies:
-- numpy
 - libgfortran
 - pandas
 - pandas-datareader
@@ -28,3 +27,4 @@ dependencies:
 - pip:
         - linearmodels
         - jupyter
+        - numpy    # There is a problem with the version provided by conda, worth checking at later point again.
