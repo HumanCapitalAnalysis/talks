@@ -40,7 +40,7 @@ in sharing the risks associated with learning about ability and varying market c
 
 * Rubinstein, Y., & Weiss, Y. (2006). [Post schooling wage growth: Investment, search and learning](https://www.sciencedirect.com/science/article/pii/S1574069206010014). In E. Hanushek, and F. Welch, editors, *Handbook of the Economics of Education*, volume 1, pages 1-67, Elsevier Science, Amsterdam, Netherlands.
 
-### [Tyranny of metrics]()
+### [Tyranny of metrics](https://github.com/HumanCapitalAnalysis/talks/blob/master/overviews/03-tyranny-of-metrics/slides.pdf)
 
 >How the obsession with quantifying human performance threatens our schools, medical care, businesses, and government. Today, organizations of all kinds are ruled by the belief that the path to success is quantifying human performance, publicizing the results, and dividing up the rewards based on the numbers. But in our zeal to instill the evaluation process with scientific rigor, we've gone from measuring performance to fixating on measuring itself. The result is a tyranny of metrics that threatens the quality of our lives and most important institutions. In this timely and powerful book, Jerry Muller uncovers the damage our obsession with metrics is causing―and shows how we can begin to fix the problem. Filled with examples from education, medicine, business and finance, government, the police and military, and philanthropy and foreign aid, this brief and accessible book explains why the seemingly irresistible pressure to quantify performance distorts and distracts, whether by encouraging "gaming the stats" or "teaching to the test." That's because what can and does get measured is not always worth measuring, may not be what we really want to know, and may draw effort away from the things we care about. Along the way, we learn why paying for measured performance doesn't work, why surgical scorecards may increase deaths, and much more. But metrics can be good when used as a complement to―rather than a replacement for―judgment based on personal experience, and Muller also gives examples of when metrics have been beneficial. Complete with a checklist of when and how to use metrics, The Tyranny of Metrics is an essential corrective to a rarely questioned trend that increasingly affects us all.
 
@@ -50,25 +50,25 @@ in sharing the risks associated with learning about ability and varying market c
 
 We discuss some of the seminal papers in the literature.
 
-### [Estimating marginal returns to education]()
+### [Estimating marginal returns to education](https://github.com/HumanCapitalAnalysis/talks/blob/master/seminal-papers/01-Carneiro-al-2011/slides.pdf)
 
 This paper estimates marginal returns to college for individuals induced to enroll in college by different marginal policy changes. The recent instrumental variables literature seeks to estimate this parameter, but in general it does so only under strong assumptions that are tested and found wanting. The authors show how to utilize economic theory and local instrumental variables estimators to estimate the effect of marginal policy changes.  
 
 * Carneiro, P., Heckman, J. J., & Vytlacil, E. J. (2011). [Estimating marginal returns to education.](https://www.aeaweb.org/articles?id=10.1257/aer.101.6.2754) *American Economic Review, 101*(6), 2754–81.
 
-### [Estimating the technology of cognitive and noncognitive skill formation]()
+### [Estimating the technology of cognitive and noncognitive skill formation](https://github.com/HumanCapitalAnalysis/talks/blob/master/seminal-papers/02-Cunha-al-2010/slides.pdf)
 
 This paper formulates and estimates multistage production functions for children's cognitive and noncognitive skills.  Using the estimated technology, the authors determine optimal targeting of interventions to children with different parental and personal birth endowments. Substitutability decreases in later stages of the life cycle in the production of cognitive skills. It is roughly constant across stages of the life cycle in the production of noncognitive skills.
 
 * Cunha, F., Heckman, J. J., & Schennach, S. M. (2010). [Estimating the technology of cognitive and noncognitive skill formation.](https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA6551) *Econometrica, 78*(3), 883–931.
 
-### [The rate of return to the HighScope Perry Preschool Program]()
+### [The rate of return to the HighScope Perry Preschool Program](https://github.com/HumanCapitalAnalysis/talks/blob/master/seminal-papers/03-Heckman-al-2010/slides.pdf)
 
 This paper estimates the rate of return to the HighScope Perry Preschool Program, an early intervention program targeted toward disadvantaged African-American youth. The authors try to explicitly address the compromising of the randomization protocol.
 
 * Heckman, J. J., Moon, S. H., Pinto, R., Savelyev, P. A., & Yavitz, A. (2010). [The rate of return to the HighScope Perry Preschool Program.](https://www.sciencedirect.com/science/article/pii/S0047272709001418) *Journal of Public Economics, 94*(1–2), 114–128.
 
-### [The career decisions of young men]()
+### [The career decisions of young men](https://github.com/HumanCapitalAnalysis/talks/blob/master/seminal-papers/04-Keane-al-1997/slides.pdf)
 
 This paper provides structural estimates of a dynamic model of schooling, work, and occupational choice decisions based on 11 years of observations on a sample of young men from the 1979 youth cohort of the National Longitudinal Surveys of Labor Market Experience (NLSY). The structural estimation framework that we adopt fully imposes the restrictions of the theory and permits an investigation of whether such a theoretically restricted model can succeed in quantitatively fitting the observed data patterns. We find that a suitably extended human capital investment model can in fact do an excellent job of fitting observed data on school attendance, work, occupational choices, and wages in the NLSY data on young men and also produces reasonable forecasts of future work decisions and wage patterns.
 
