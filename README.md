@@ -88,6 +88,6 @@ We discuss the basic ideas of mathematical modeling with special reference to ec
 
 ## References
 
-* Ishigami and Homma (1990)
+* Ishigami, T., & Homma, T. (1990). [An importance quantification technique in uncertainty analysis for computer models](https://www.semanticscholar.org/paper/An-importance-quantification-technique-in-analysis-Ishigami-Homma/a7d1d9c6df6635592e8f572d62213d082523b7e9). *Proceedings. First International Symposium on Uncertainty Modeling and Analysis*, 398-403.
 
 [![Build Status](https://travis-ci.org/HumanCapitalAnalysis/talks.svg?branch=master)](https://travis-ci.org/HumanCapitalAnalysis/talks)
