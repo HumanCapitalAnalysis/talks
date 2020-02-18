@@ -8,23 +8,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: create conda env
+    - name: install latex dependencies
       run: |
         sudo apt-get update
         sudo apt-get install texlive texlive-science texlive-latex-extra texlive-bibtex-extra texlive-fonts-extra
         sudo add-apt-repository ppa:malteworld/ppa
         sudo apt update
-        sudo apt-get install pdftk
-        wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-        bash miniconda.sh -b -p $HOME/miniconda
-        export PATH="$HOME/miniconda/bin:$PATH"
-        hash -r
-        conda config --set always_yes yes --set changeps1 no
-        conda update -q conda
-        conda info -a
-        PATH="$HOME/miniconda/bin:$PATH"
-        conda env create -f configurations/environment.yml
-        source activate teaching-talks 
+        sudo apt-get install pdftk 
+    - name: create conda env
+    - uses: goanpeca/setup-miniconda@v1.0.2
+      with:
+           activate-environment: teaching-talks
+           environment-file: configurations/example-environment.yml
+           python-version: 3.5
+           auto-activate-base: false
     - name: compile latex \#1
       run: |
         texhash
