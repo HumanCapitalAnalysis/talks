@@ -15,8 +15,8 @@ jobs:
         sudo add-apt-repository ppa:malteworld/ppa
         sudo apt update
         sudo apt-get install pdftk 
-    - name: create conda env
-      uses: goanpeca/setup-miniconda@v1.0.2
+    - uses: actions/checkout@v2
+    - uses: goanpeca/setup-miniconda@v1.0.2
       with:
            activate-environment: teaching-talks
            environment-file: configurations/environment.yml
