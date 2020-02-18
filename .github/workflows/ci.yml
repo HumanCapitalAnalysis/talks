@@ -19,7 +19,7 @@ jobs:
       uses: goanpeca/setup-miniconda@v1.0.2
       with:
            activate-environment: teaching-talks
-           environment-file: configurations/example-environment.yml
+           environment-file: configurations/environment.yml
            python-version: 3.5
            auto-activate-base: false
     - name: compile latex \#1
