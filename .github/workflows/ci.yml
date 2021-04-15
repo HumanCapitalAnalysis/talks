@@ -12,7 +12,7 @@ jobs:
     - uses: conda-incubator/setup-miniconda@v2
       with:
            activate-environment: teaching-talks
-           environment-file: configurations/test.yml
+           environment-file: configurations/environment.yml
            python-version: 3.7
            auto-activate-base: false
 
