@@ -32,6 +32,3 @@ for dirname in DIRNAMES:
         os.chdir("../")
 
     os.chdir("../")
-
-# run pytest
-subprocess.check_call(["pytest"])

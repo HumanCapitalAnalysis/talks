@@ -1,11 +1,12 @@
 name: teaching-talks
 
 channels:
-- conda
+- defaults
 - conda-forge
 - r
 
 dependencies:
+- python=3.7
 - libgfortran
 - pandas
 - pandas-datareader
@@ -25,6 +26,6 @@ dependencies:
 - rpy2
 - simplegeneric
 - pip:
-        - linearmodels
-        - jupyter
-        - numpy    # There is a problem with the version provided by conda, worth checking at later point again.
+   - seaborn
+   - linearmodels
+

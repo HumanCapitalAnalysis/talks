@@ -6,7 +6,7 @@ import glob
 import os
 
 def run_notebook(notebook):
-    cmd = ' jupyter nbconvert --execute {}  --ExecutePreprocessor.timeout=-1'.format(notebook)
+    cmd = ' jupyter nbconvert --execute %s --ExecutePreprocessor.timeout=-1 --to notebook' %notebook
     sp.check_call(cmd, shell=True)
 
 

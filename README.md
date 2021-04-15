@@ -82,9 +82,6 @@ We share some basic research skills that turned out to be useful.
 
 We discuss some best practices on how to read scientific papers.
 
-### [Mathematical modeling](https://github.com/HumanCapitalAnalysis/talks/blob/master/research-skills/02-mathematical-modeling/slides.pdf)
-
-We discuss the basic ideas of mathematical modeling with special reference to economic models.
 
 ## References
 
