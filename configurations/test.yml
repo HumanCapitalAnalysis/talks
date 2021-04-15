@@ -1,0 +1,31 @@
+name: test-teach
+
+channels:
+- defaults
+- conda-forge
+- r
+
+dependencies:
+- python=3.7
+- libgfortran
+- pandas
+- pandas-datareader
+- flake8
+- pytest
+- scipy=1.2.1
+- jupyterlab
+- matplotlib
+- seaborn
+- jupyter
+- pip
+- numba
+- mpi4py
+- pygraphviz
+- rise
+- r-essentials
+- rpy2
+- simplegeneric
+- pip:
+   - seaborn
+   - linearmodels
+
